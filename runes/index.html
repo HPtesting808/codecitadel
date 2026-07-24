@@ -1,0 +1,266 @@
+---
+layout: default
+title: "Runes — CodeCitadel"
+description: "Quick-reference runes: prompts, workflows, scripts, and snippets for your daily incantations."
+---
+
+<header class="page-header" style="padding: 4rem 0 2rem; text-align: center;">
+  <h1 class="page-title">Runes</h1>
+  <p class="page-subtitle">Essential references for the daily casting. Bookmark, copy, bind to keys.</p>
+</header>
+
+<div class="container">
+  <!-- Rune Categories -->
+  <div class="grid grid-4" style="gap: 1.5rem; margin-bottom: 3rem;">
+    <a href="/runes/prompts/" class="card rune-category" style="text-align: center; padding: 2rem 1.5rem; background: linear-gradient(180deg, rgba(201, 168, 76, 0.1), transparent); border-color: var(--color-accent);">
+      <div style="font-size: 3rem; margin-bottom: 1rem;">🪄</div>
+      <h3>Prompt Library</h3>
+      <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin: 0;">200+ battle-tested prompts for coding, refactoring, debugging, architecture, docs.</p>
+    </a>
+    <a href="/runes/workflows/" class="card rune-category" style="text-align: center; padding: 2rem 1.5rem; background: linear-gradient(180deg, rgba(234, 76, 137, 0.1), transparent); border-color: #ea4c89;">
+      <div style="font-size: 3rem; margin-bottom: 1rem;">🔮</div>
+      <h3>Workflows</h3>
+      <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin: 0;">n8n, GitHub Actions, CI/CD templates. Import. Configure. Automate.</p>
+    </a>
+    <a href="/runes/scripts/" class="card rune-category" style="text-align: center; padding: 2rem 1.5rem; background: linear-gradient(180deg, rgba(255, 107, 53, 0.1), transparent); border-color: #ff6b35;">
+      <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+      <h3>Scripts & CLIs</h3>
+      <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin: 0;">Repo mappers, artifact builders, workflow generators, git hooks, tmux layouts.</p>
+    </a>
+    <a href="/runes/cheatsheets/" class="card rune-category" style="text-align: center; padding: 2rem 1.5rem; background: linear-gradient(180deg, rgba(94, 106, 210, 0.1), transparent); border-color: #5e6ad2;">
+      <div style="font-size: 3rem; margin-bottom: 1rem;">📋</div>
+      <h3>Cheatsheets</h3>
+      <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin: 0;">One-page references: Warp, Aider, Cline, n8n, Cursor, git, regex, tmux.</p>
+    </a>
+  </div>
+
+  <!-- Quick Copy Runes -->
+  <section aria-labelledby="quick-runes">
+    <h2 id="quick-runes" style="margin-bottom: 1.5rem;">Quick Runes — Copy & Cast</h2>
+    
+    <div class="grid grid-2" style="gap: 1rem;">
+      <!-- Aider Runes -->
+      <div class="card" style="padding: 1.5rem;">
+        <h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;"><span style="font-size: 1.5rem;">🤝</span> Aider Essentials</h3>
+        <div class="rune-snippet">
+          <button class="copy-btn" data-target="aider-basic" style="float: right; padding: 0.25rem 0.75rem; font-size: 0.7rem;">Copy</button>
+          <pre id="aider-basic"><code># Basic: edit files in git repo
+aider --model gpt-4o
+
+# With Claude
+aider --model claude-3-5-sonnet-20241022
+
+# Add specific files
+aider src/main.py tests/test_main.py
+
+# Read-only (no edits)
+aider --read-only
+
+# Use local model via Ollama
+aider --model ollama/llama3.1
+</code></pre>
+        </div>
+      </div>
+
+      <!-- Cursor Rules Rune -->
+      <div class="card" style="padding: 1.5rem;">
+        <h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;"><span style="font-size: 1.5rem;">⚡</span> Cursor Rules</h3>
+        <div class="rune-snippet">
+          <button class="copy-btn" data-target="cursor-rules" style="float: right; padding: 0.25rem 0.75rem; font-size: 0.7rem;">Copy</button>
+          <pre id="cursor-rules"><code># .cursorrules
+You are an expert TypeScript/React developer.
+- Use functional components, hooks, TypeScript strict mode
+- Prefer composition over inheritance
+- Write tests with Vitest + React Testing Library
+- Follow project's existing patterns
+- No comments unless explaining "why" not "what"
+- Use path aliases (@/ for src/)
+- Tailwind for styling, no custom CSS
+</code></pre>
+        </div>
+      </div>
+
+      <!-- n8n Workflow Rune -->
+      <div class="card" style="padding: 1.5rem;">
+        <h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;"><span style="font-size: 1.5rem;">🔮</span> n8n Webhook Trigger</h3>
+        <div class="rune-snippet">
+          <button class="copy-btn" data-target="n8n-webhook" style="float: right; padding: 0.25rem 0.75rem; font-size: 0.7rem;">Copy</button>
+          <pre id="n8n-webhook"><code># n8n webhook for GitHub PR events
+{
+  "nodes": [
+    {
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "position": [250, 300],
+      "webhookUrl": "github-pr",
+      "httpMethod": "POST",
+      "responseMode": "onReceived"
+    },
+    {
+      "name": "AI Code Review",
+      "type": "n8n-nodes-base.openAi",
+      "position": [500, 300],
+      "model": "gpt-4o",
+      "systemPrompt": "Review this PR diff for bugs, security, style. Be concise."
+    }
+  ],
+  "connections": {
+    "Webhook": { "main": [[{"node": "AI Code Review"}]] }
+  }
+}
+</code></pre>
+        </div>
+      </div>
+
+      <!-- Warp Workflow Rune -->
+      <div class="card" style="padding: 1.5rem;">
+        <h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;"><span style="font-size: 1.5rem;">🌀</span> Warp Workflow</h3>
+        <div class="rune-snippet">
+          <button class="copy-btn" data-target="warp-workflow" style="float: right; padding: 0.25rem 0.75rem; font-size: 0.7rem;">Copy</button>
+          <pre id="warp-workflow"><code># ~/.warp/workflows/pr-review.yaml
+name: "PR Review"
+description: "Create PR with AI review"
+command: |
+  gh pr create --fill --web
+  && gh pr view --json number,headRefName -q '.number + " " + .headRefName'
+  | xargs -I {} sh -c 'aider --message "Review PR #{}"'
+tags: ["git", "ai", "review"]
+</code></pre>
+        </div>
+      </div>
+
+      <!-- Cline Prompt Rune -->
+      <div class="card" style="padding: 1.5rem;">
+        <h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;"><span style="font-size: 1.5rem;">🧠</span> Cline System Prompt</h3>
+        <div class="rune-snippet">
+          <button class="copy-btn" data-target="cline-prompt" style="float: right; padding: 0.25rem 0.75rem; font-size: 0.7rem;">Copy</button>
+          <pre id="cline-prompt"><code># Add to Cline custom instructions:
+You are a senior engineer. Plan before acting.
+- Always create a todo list for multi-step tasks
+- Run tests after changes
+- Prefer small, focused commits
+- Ask before installing new deps
+- Use existing project patterns
+- Document complex logic inline
+</code></pre>
+        </div>
+      </div>
+
+      <!-- Git Aliases Rune -->
+      <div class="card" style="padding: 1.5rem;">
+        <h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;"><span style="font-size: 1.5rem;">📜</span> Git Aliases</h3>
+        <div class="rune-snippet">
+          <button class="copy-btn" data-target="git-aliases" style="float: right; padding: 0.25rem 0.75rem; font-size: 0.7rem;">Copy</button>
+          <pre id="git-aliases"><code># ~/.gitconfig
+[alias]
+  co = checkout
+  cb = checkout -b
+  st = status -sb
+  lg = log --oneline --graph --decorate -20
+  lga = log --oneline --graph --decorate --all
+  amend = commit --amend --no-edit
+  undo = reset --soft HEAD~1
+  wip = commit -am "WIP"
+  unwip = reset HEAD~1
+  branches = branch -v
+  cleanup = !git branch --merged | grep -v \"\\*\" | xargs -n 1 git branch -d
+</code></pre>
+        </div>
+      </div>
+
+      <!-- tmux Layout Rune -->
+      <div class="card" style="padding: 1.5rem;">
+        <h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;"><span style="font-size: 1.5rem;">🖥️</span> tmux Dev Layout</h3>
+        <div class="rune-snippet">
+          <button class="copy-btn" data-target="tmux-layout" style="float: right; padding: 0.25rem 0.75rem; font-size: 0.7rem;">Copy</button>
+          <pre id="tmux-layout"><code># ~/.tmux/dev-layout.sh
+#!/bin/bash
+session="dev"
+tmux new-session -d -s $session -n editor
+tmux send-keys -t $session:editor 'nvim' Enter
+tmux split-window -h -t $session:editor -p 30
+tmux send-keys -t $session:editor.1 'aider' Enter
+tmux split-window -v -t $session:editor.0 -p 25
+tmux send-keys -t $session:editor.0 'git status' Enter
+tmux attach -t $session
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="newsletter" style="margin-top: 4rem;">
+    <h2>Want These Delivered Weekly?</h2>
+    <p>One rune per scroll. Curated. Battle-tested. Zero fluff.</p>
+    <form class="newsletter-form" action="https://api.buttondown.email/v1/subscribers" method="POST" target="_blank" style="max-width: 400px; margin: 1.5rem auto 0;">
+      <input type="email" name="email" placeholder="your@grimoire.com" required style="flex: 1;">
+      <button type="submit" class="btn btn-primary">Enlist</button>
+    </form>
+  </section>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.dataset.target;
+      const code = document.getElementById(targetId).textContent;
+      navigator.clipboard.writeText(code).then(() => {
+        btn.textContent = 'Copied!';
+        btn.style.background = 'var(--color-success)';
+        btn.style.color = 'var(--color-bg)';
+        setTimeout(() => {
+          btn.textContent = 'Copy';
+          btn.style.background = '';
+          btn.style.color = '';
+        }, 2000);
+      });
+    });
+  });
+});
+</script>
+
+<style>
+.rune-snippet {
+  position: relative;
+}
+.rune-snippet pre {
+  margin: 0;
+  border-radius: var(--radius-md);
+  max-height: 300px;
+  overflow: auto;
+}
+.copy-btn {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.copy-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+.newsletter {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, var(--color-card), var(--color-bg-elevated));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+.newsletter h2 { margin-bottom: 0.5rem; }
+.newsletter p { color: var(--color-text-secondary); margin-bottom: 1.5rem; }
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+}
+.newsletter-form input {
+  padding: 0.75rem 1rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+}
+</style>

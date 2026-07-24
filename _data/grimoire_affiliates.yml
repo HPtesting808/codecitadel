@@ -1,0 +1,112 @@
+# Grimoire of Affiliate Alliances
+# Replace placeholder refs with your actual affiliate codes
+
+cursor:
+  name: "Cursor"
+  sigil: "⚡"
+  url: "https://cursor.sh"
+  affiliate_url: "https://cursor.sh?ref=YOUR_CURSOR_REF"
+  description: "AI-first code editor — the wand that writes with you"
+  commission: "20% recurring"
+  category: "codex"
+  tier: "apprentice"
+
+n8n_cloud:
+  name: "n8n Cloud"
+  sigil: "🔮"
+  url: "https://n8n.cloud"
+  affiliate_url: "https://n8n.cloud?ref=YOUR_N8N_REF"
+  description: "Workflow automation spells — self-hosted or cloud"
+  commission: "20% recurring"
+  category: "automation"
+  tier: "adept"
+
+raycast:
+  name: "Raycast Pro"
+  sigil: "✨"
+  url: "https://raycast.com/pro"
+  affiliate_url: "https://raycast.com/pro?ref=YOUR_RAYCAST_REF"
+  description: "Lightning launcher with AI, snippets, and extension spells"
+  commission: "30% recurring"
+  category: "productivity"
+  tier: "adept"
+
+linear:
+  name: "Linear"
+  sigil: "📜"
+  url: "https://linear.app"
+  affiliate_url: "https://linear.app?ref=YOUR_LINEAR_REF"
+  description: "Issue tracking and project management for wizard teams"
+  commission: "25% recurring"
+  category: "project_management"
+  tier: "master"
+
+warp:
+  name: "Warp"
+  sigil: "🌀"
+  url: "https://warp.dev"
+  affiliate_url: "https://warp.dev?ref=YOUR_WARP_REF"
+  description: "Terminal reimagined with AI, workflows, and team grimoires"
+  commission: "20% recurring"
+  category: "terminal"
+  tier: "apprentice"
+
+aider:
+  name: "Aider"
+  sigil: "🤝"
+  url: "https://aider.chat"
+  affiliate_url: "https://aider.chat?ref=YOUR_AIDER_REF"
+  description: "AI pair programming in your terminal — the familiar at your side"
+  commission: "Donation-based"
+  category: "codex"
+  tier: "apprentice"
+
+cline:
+  name: "Cline"
+  sigil: "🧠"
+  url: "https://cline.bot"
+  affiliate_url: "https://cline.bot?ref=YOUR_CLINE_REF"
+  description: "Autonomous coding agent for VS Code — your golem builder"
+  commission: "Open source"
+  category: "codex"
+  tier: "adept"
+
+continue_dev:
+  name: "Continue"
+  sigil: "▶️"
+  url: "https://continue.dev"
+  affiliate_url: "https://continue.dev?ref=YOUR_CONTINUE_REF"
+  description: "Open-source AI code assistant for VS Code and JetBrains"
+  commission: "Open source"
+  category: "codex"
+  tier: "apprentice"
+
+sourcegraph_cody:
+  name: "Cody by Sourcegraph"
+  sigil: "🔍"
+  url: "https://sourcegraph.com/cody"
+  affiliate_url: "https://sourcegraph.com/cody?ref=YOUR_CODY_REF"
+  description: "AI coding assistant that knows your entire codebase"
+  commission: "Contact for partnership"
+  category: "codex"
+  tier: "master"
+
+github_copilot:
+  name: "GitHub Copilot"
+  sigil: "👻"
+  url: "https://github.com/features/copilot"
+  affiliate_url: "https://github.com/features/copilot?ref=YOUR_COPILOT_REF"
+  description: "AI pair programmer — the original ghost in the machine"
+  commission: "Microsoft Partner Network"
+  category: "codex"
+  tier: "master"
+
+cursor_cloud:
+  name: "Cursor Cloud"
+  sigil: "☁️"
+  url: "https://cursor.sh/cloud"
+  affiliate_url: "https://cursor.sh/cloud?ref=YOUR_CURSOR_CLOUD_REF"
+  description: "Remote Cursor environments — code from anywhere"
+  commission: "20% recurring"
+  category: "cloud"
+  tier: "master"

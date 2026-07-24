@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Jekyll v{{ jekyll.version }}">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.site_name }} — {{ site.site_tagline }}</title>
+  <meta name="description" content="{{ page.description | default: site.site_description | strip_html | truncate: 160 }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url | relative_url }}">
+  
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="{{ site.site_name }}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.site_name }}">
+  <meta property="og:description" content="{{ page.description | default: site.site_description | strip_html | truncate: 160 }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url | relative_url }}">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  {% if page.image %}<meta property="og:image" content="{{ site.url }}{{ page.image | relative_url }}">{% endif %}
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="{{ site.twitter.card }}">
+  <meta name="twitter:site" content="@{{ site.twitter.username }}">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.site_name }}">
+  <meta name="twitter:description" content="{{ page.description | default: site.site_description | strip_html | truncate: 160 }}">
+  {% if page.image %}<meta name="twitter:image" content="{{ site.url }}{{ page.image | relative_url }}">{% endif %}
+  
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.site_name }}",
+    "url": "{{ site.url }}",
+    "description": "{{ site.site_description }}",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "{{ site.url }}/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  
+  <!-- Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+  
+  {% feed_meta %}
+  {% seo %}
+</head>
+<body>
+  <!-- Background glow -->
+  <div class="bg-glow" aria-hidden="true"></div>
+  
+  <!-- Skip to main content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="{{ '/' | relative_url }}" class="site-logo" aria-label="{{ site.site_name }} — Home">
+        <svg class="logo-sigil" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect x="4" y="4" width="24" height="24" rx="4" stroke="currentColor" stroke-width="2"/>
+          <path d="M10 16 L16 10 M16 10 L22 16 M16 10 L16 22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="logo-text">{{ site.site_name }}</span>
+        <span class="logo-tagline">{{ site.site_tagline }}</span>
+      </a>
+      
+      <nav class="site-nav" role="navigation" aria-label="Main navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="{{ '/' | relative_url }}" class="nav-link">Sanctum</a></li>
+          <li><a href="{{ '/grimoires/' | relative_url }}" class="nav-link">Grimoires</a></li>
+          <li><a href="{{ '/artifacts/' | relative_url }}" class="nav-link">Artifacts</a></li>
+          <li><a href="{{ '/runes/' | relative_url }}" class="nav-link">Runes</a></li>
+          <li><a href="{{ '/compare/' | relative_url }}" class="nav-link">Versus</a></li>
+          <li><a href="{{ '/about/' | relative_url }}" class="nav-link">The Order</a></li>
+        </ul>
+      </nav>
+      
+      <div class="header-actions">
+        <a href="https://ko-fi.com/{{ site.kofi_username }}" target="_blank" rel="noopener" class="btn btn-kofi" aria-label="Support CodexFlow on Ko-fi">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+          <span>Support the Order</span>
+        </a>
+        <a href="{{ '/search/' | relative_url }}" class="btn btn-search" aria-label="Search the archives">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Progress bar -->
+  <div class="reading-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Reading progress"></div>
+  
+  <!-- Main content -->
+  <main id="main-content" class="site-main" role="main">
+    {{ content }}
+  </main>
+  
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="{{ '/' | relative_url }}" class="footer-logo">
+            <svg class="logo-sigil" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <rect x="4" y="4" width="24" height="24" rx="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M10 16 L16 10 M16 10 L22 16 M16 10 L16 22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>{{ site.site_name }}</span>
+          </a>
+          <p class="footer-tagline">{{ site.site_description }}</p>
+          <div class="footer-social">
+            <a href="https://github.com/HPtesting808/codecitadel" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.34.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.105-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.28-1.56 3.285-1.23 3.285-1.23.645 1.65.225 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
+            <a href="https://twitter.com/CodeCitadel" target="_blank" rel="noopener" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+            <a href="https://ko-fi.com/{{ site.kofi_username }}" target="_blank" rel="noopener" aria-label="Ko-fi"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg></a>
+          </div>
+        </div>
+        
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-column">
+            <h4>Grimoires</h4>
+            <ul>
+              <li><a href="{{ '/grimoires/' | relative_url }}">All Grimoires</a></li>
+              <li><a href="{{ '/grimoires/codex/' | relative_url }}">Codex Editors</a></li>
+              <li><a href="{{ '/grimoires/automation/' | relative_url }}">Automation</a></li>
+              <li><a href="{{ '/grimoires/terminal/' | relative_url }}">Terminal</a></li>
+              <li><a href="{{ '/grimoires/productivity/' | relative_url }}">Productivity</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Artifacts</h4>
+            <ul>
+              <li><a href="{{ '/artifacts/' | relative_url }}">All Artifacts</a></li>
+              <li><a href="{{ '/artifacts/templates/' | relative_url }}">Templates</a></li>
+              <li><a href="{{ '/artifacts/starter-kits/' | relative_url }}">Starter Kits</a></li>
+              <li><a href="{{ '/artifacts/cheatsheets/' | relative_url }}">Cheatsheets</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Runes</h4>
+            <ul>
+              <li><a href="{{ '/runes/' | relative_url }}">All Runes</a></li>
+              <li><a href="{{ '/runes/workflows/' | relative_url }}">Workflows</a></li>
+              <li><a href="{{ '/runes/prompts/' | relative_url }}">Prompt Library</a></li>
+              <li><a href="{{ '/runes/scripts/' | relative_url }}">Scripts</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>The Order</h4>
+            <ul>
+              <li><a href="{{ '/about/' | relative_url }}">About CodexFlow</a></li>
+              <li><a href="{{ '/support/' | relative_url }}">Support the Order</a></li>
+              <li><a href="{{ '/privacy/' | relative_url }}">Privacy Scroll</a></li>
+              <li><a href="{{ '/disclosure/' | relative_url }}">Affiliate Disclosure</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.site_name }}. Built with Jekyll. Hosted on GitHub Pages.</p>
+        <p class="footer-disclaimer">Affiliate links marked with † — we earn commission at no cost to you. <a href="{{ '/disclosure/' | relative_url }}">Full disclosure</a>.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>
+</body>
+</html>

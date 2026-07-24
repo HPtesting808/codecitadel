@@ -1,0 +1,136 @@
+---
+layout: default
+title: "Grimoires — CodeCitadel"
+description: "Deep-dive tutorials and guides for AI coding agents, workflow automation, and developer productivity. The arcane knowledge you seek."
+---
+
+<header class="page-header" style="padding: 4rem 0 2rem; text-align: center;">
+  <h1 class="page-title">Grimoires</h1>
+  <p class="page-subtitle">Transcribed from the archives. Battle-tested in production.</p>
+</header>
+
+<div class="container">
+  <!-- Filter Tabs -->
+  <div class="filter-tabs" style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-bottom: 3rem;" role="tablist" aria-label="Filter grimoires by category">
+    <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All Grimoires</button>
+    <button class="filter-tab" data-filter="codex" role="tab" aria-selected="false">Codex Editors</button>
+    <button class="filter-tab" data-filter="automation" role="tab" aria-selected="false">Automation</button>
+    <button class="filter-tab" data-filter="terminal" role="tab" aria-selected="false">Terminal</button>
+    <button class="filter-tab" data-filter="productivity" role="tab" aria-selected="false">Productivity</button>
+    <button class="filter-tab" data-filter="architecture" role="tab" aria-selected="false">Architecture</button>
+  </div>
+
+  <!-- Grimoire Grid -->
+  <div class="card-grid" id="grimoire-grid">
+    {% for post in site.posts %}
+      <article class="card grimoire-card" data-category="{{ post.categories | join: ' ' | downcase }}">
+        <a href="{{ post.url | relative_url }}" class="card-link">
+          <div class="card-header">
+            <div class="card-meta">
+              {% if post.categories %}
+                {% for cat in post.categories limit:2 %}
+                  <span class="card-tag">{{ cat | capitalize }}</span>
+                {% endfor %}
+              {% endif %}
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">{{ post.title }}</h3>
+            <p class="card-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-meta">{{ post.reading_time | default: "8 min read" }}</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px; color: var(--color-accent);"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+      </article>
+    {% endfor %}
+  </div>
+
+  {% if site.posts.size == 0 %}
+    <div class="empty-state" style="text-align: center; padding: 4rem 2rem;">
+      <div style="font-size: 4rem; margin-bottom: 1rem;">📜</div>
+      <h2>No Grimoires Yet</h2>
+      <p style="color: var(--color-text-secondary); max-width: 400px; margin: 1rem auto;">The archives are empty. The scribes are transcribing the first scrolls. Return soon.</p>
+    </div>
+  {% endif %}
+</div>
+
+<!-- Category Pages Notice -->
+<section class="section" style="background: var(--color-card); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+  <div class="container">
+    <h2 style="text-align: center; margin-bottom: 2rem;">Browse by Circle</h2>
+    <div class="grid grid-4" style="max-width: 800px; margin: 0 auto;">
+      <a href="/grimoires/codex/" class="card" style="text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">⚡</div>
+        <h3>Codex Editors</h3>
+        <p style="color: var(--color-text-secondary); font-size: 0.9rem;">Cursor, Aider, Cline, Copilot, Continue</p>
+      </a>
+      <a href="/grimoires/automation/" class="card" style="text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔮</div>
+        <h3>Automation</h3>
+        <p style="color: var(--color-text-secondary); font-size: 0.9rem;">n8n, Zapier, Make, GitHub Actions</p>
+      </a>
+      <a href="/grimoires/terminal/" class="card" style="text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌀</div>
+        <h3>Terminal</h3>
+        <p style="color: var(--color-text-secondary); font-size: 0.9rem;">Warp, Ghostty, WezTerm, tmux, shells</p>
+      </a>
+      <a href="/grimoires/productivity/" class="card" style="text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">✨</div>
+        <h3>Productivity</h3>
+        <p style="color: var(--color-text-secondary); font-size: 0.9rem;">Raycast, Linear, Notion, Obsidian</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.filter-tab');
+  const cards = document.querySelectorAll('.grimoire-card');
+  
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      
+      const filter = tab.dataset.filter;
+      cards.forEach(card => {
+        if (filter === 'all' || card.dataset.category.includes(filter)) {
+          card.style.display = 'flex';
+          card.style.animation = 'fadeInUp 0.4s ease forwards';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>
+
+<style>
+.filter-tab {
+  padding: 0.5rem 1.25rem;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.filter-tab:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+.filter-tab.active {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dim));
+  border-color: var(--color-accent);
+  color: var(--color-bg);
+}
+.empty-state h2 { margin-bottom: 0.5rem; }
+</style>

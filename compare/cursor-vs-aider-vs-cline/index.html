@@ -1,0 +1,438 @@
+---
+layout: default
+title: "Cursor vs Aider vs Cline — The Three-Way Codex Duel"
+description: "We pit the three strongest AI coding agents against each other in a battle of features, pricing, workflows, and real-world performance. Which familiar deserves your keystrokes?"
+---
+
+<header class="page-header" style="padding: 4rem 0 2rem; text-align: center; background: linear-gradient(180deg, rgba(201, 168, 76, 0.1), transparent);">
+  <span class="page-tag" style="display: inline-block; padding: 0.25rem 1rem; background: rgba(201, 168, 76, 0.15); border: 1px solid var(--color-accent); border-radius: 999px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1.5rem; color: var(--color-accent);">Versus Arena</span>
+  <h1 class="page-title">Cursor vs Aider vs Cline</h1>
+  <p class="page-subtitle">Three wizards enter. One earns a permanent sigil on your toolbar.</p>
+  <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; color: var(--color-text-muted); font-size: 0.9rem;">
+    <span>📅 {{ page.date | date: "%B %d, %Y" }}</span>
+    <span>⏱️ {{ page.reading_time }}</span>
+    <span>⚔️ Comparison</span>
+  </div>
+</header>
+
+<div class="container">
+  <!-- Quick Verdict -->
+  <section class="card" style="margin-bottom: 2rem; background: linear-gradient(135deg, rgba(201, 168, 76, 0.1), transparent); border-color: var(--color-accent);">
+    <div class="card-body" style="padding: 2rem;">
+      <h2 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;"><span style="font-size: 1.5rem;">🏆</span> Quick Verdict</h2>
+      <div class="grid grid-3" style="gap: 1rem;">
+        <div style="text-align: center; padding: 1rem; background: var(--color-bg); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚡</div>
+          <strong>Daily Driver</strong><br>
+          <span style="color: var(--color-accent); font-weight: 600;">Cursor</span>
+          <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin: 0.5rem 0 0;">Best UX, Composer, @codebase</p>
+        </div>
+        <div style="text-align: center; padding: 1rem; background: var(--color-bg); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🤝</div>
+          <strong>Terminal Purist</strong><br>
+          <span style="color: var(--color-accent); font-weight: 600;">Aider</span>
+          <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin: 0.5rem 0 0;">Git-native, BYOK, privacy-first</p>
+        </div>
+        <div style="text-align: center; padding: 1rem; background: var(--color-bg); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🧠</div>
+          <strong>Agentic Tasks</strong><br>
+          <span style="color: var(--color-accent); font-weight: 600;">Cline</span>
+          <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin: 0.5rem 0 0;">Autonomous loops, browser, MCP</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section aria-labelledby="comparison-table">
+    <h2 id="comparison-table" style="margin-bottom: 1.5rem;">The Grimoire of Comparison</h2>
+    <div class="comparison-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Sigil</th>
+            <th style="text-align: center;">⚡ Cursor</th>
+            <th style="text-align: center;">🤝 Aider</th>
+            <th style="text-align: center;">🧠 Cline</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Philosophy</strong></td>
+            <td>AI-first IDE (VS Code fork)</td>
+            <td>Terminal-native pair programmer</td>
+            <td>Autonomous coding agent</td>
+          </tr>
+          <tr>
+            <td><strong>Interface</strong></td>
+            <td>GUI (IDE)</td>
+            <td>CLI / Terminal</td>
+            <td>VS Code Extension (Sidebar)</td>
+          </tr>
+          <tr>
+            <td><strong>Multi-file Edits</strong></td>
+            <td class="feature-check">✅ Composer (best in class)</td>
+            <td class="feature-partial">⚠️ Sequential, git commits</td>
+            <td class="feature-check">✅ Autonomous planning</td>
+          </tr>
+          <tr>
+            <td><strong>Codebase Context</strong></td>
+            <td class="feature-check">✅ @codebase, embeddings</td>
+            <td class="feature-check">✅ Repo map (tree-sitter)</td>
+            <td class="feature-check">✅ Full workspace access</td>
+          </tr>
+          <tr>
+            <td><strong>Model Support</strong></td>
+            <td>GPT-4o, Claude 3.5, custom</td>
+            <td>Any (BYOK: OpenAI, Anthropic, Ollama, etc.)</td>
+            <td>Any (BYOK + OpenRouter)</td>
+          </tr>
+          <tr>
+            <td><strong>Autonomous Loops</strong></td>
+            <td class="feature-cross">❌ Human-in-the-loop</td>
+            <td class="feature-cross">❌ Human-in-the-loop</td>
+            <td class="feature-check">✅ Plan → Act → Observe → Repeat</td>
+          </tr>
+          <tr>
+            <td><strong>Browser / Research</strong></td>
+            <td class="feature-cross">❌</td>
+            <td class="feature-cross">❌</td>
+            <td class="feature-check">✅ Built-in browser tool</td>
+          </tr>
+          <tr>
+            <td><strong>Command Execution</strong></td>
+            <td class="feature-partial">⚠️ Terminal in IDE</td>
+            <td class="feature-cross">❌ You run commands</td>
+            <td class="feature-check">✅ Runs & approves commands</td>
+          </tr>
+          <tr>
+            <td><strong>MCP Support</strong></td>
+            <td class="feature-cross">❌</td>
+            <td class="feature-cross">❌</td>
+            <td class="feature-check">✅ Full MCP client</td>
+          </tr>
+          <tr>
+            <td><strong>Git Integration</strong></td>
+            <td>Standard IDE git</td>
+            <td class="feature-check">✅ Core philosophy (every edit = commit)</td>
+            <td>Standard IDE git</td>
+          </tr>
+          <tr>
+            <td><strong>Privacy</strong></td>
+            <td>Privacy Mode (Business)</td>
+            <td class="feature-check">✅ Zero telemetry by default</td>
+            <td>Local-first, configurable</td>
+          </tr>
+          <tr>
+            <td><strong>Pricing</strong></td>
+            <td>$0 / $20 / $40 per mo</td>
+            <td>Free (BYOK — you pay API)</td>
+            <td>Free (BYOK — you pay API)</td>
+          </tr>
+          <tr>
+            <td><strong>Learning Curve</strong></td>
+            <td class="feature-check">Low (VS Code familiar)</td>
+            <td class="feature-partial">Medium (terminal + git)</td>
+            <td class="feature-partial">Medium (agent concepts)</td>
+          </tr>
+          <tr>
+            <td><strong>Best For</strong></td>
+            <td>Daily coding, refactoring, teams</td>
+            <td>Terminal dwellers, privacy, cost control</td>
+            <td>Complex tasks, research, automation</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Deep Dives -->
+  <section aria-labelledby="deep-dives">
+    <h2 id="deep-dives" style="margin: 3rem 0 1.5rem;">Deep Dives</h2>
+    
+    <article class="card" style="margin-bottom: 1.5rem;">
+      <div class="card-header" style="background: linear-gradient(90deg, rgba(201, 168, 76, 0.2), transparent); border-bottom: 1px solid var(--color-accent);">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <div style="font-size: 3rem;">⚡</div>
+          <div>
+            <h3 style="margin: 0;">Cursor — The Polished Familiar</h3>
+            <p style="margin: 0.25rem 0 0; color: var(--color-text-secondary);">AI-first IDE. Feels like VS Code with a PhD in your codebase.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Killer Feature: Composer</h4>
+        <p>Multi-file editing with live diff preview. Say "add auth to the API" and watch it create routes, middleware, tests, and update configs across 15 files. You review, approve, done.</p>
+        
+        <h4>@codebase Chat</h4>
+        <p>Ask "where do we handle webhooks?" and it searches your entire indexed codebase, showing relevant files with snippets. No more grep voyages.</p>
+        
+        <h4>Rules System (.cursorrules)</h4>
+        <p>Project-specific instructions that persist. "Use Tailwind, no custom CSS. Write Vitest tests. Follow existing patterns." The familiar remembers.</p>
+        
+        <div class="grid grid-2" style="gap: 1rem; margin-top: 1rem;">
+          <div class="card" style="padding: 1rem; background: rgba(63, 185, 80, 0.1); border-color: var(--color-success);">
+            <strong style="color: var(--color-success);">✅ Strengths</strong>
+            <ul style="margin: 0.5rem 0 0; font-size: 0.9rem; padding-left: 1.25rem;">
+              <li>Best-in-class UX & polish</li>
+              <li>Composer = multi-file magic</li>
+              <li>@codebase = instant context</li>
+              <li>Privacy Mode (Business)</li>
+              <li>Team features (share rules, prompts)</li>
+            </ul>
+          </div>
+          <div class="card" style="padding: 1rem; background: rgba(248, 81, 73, 0.1); border-color: var(--color-error);">
+            <strong style="color: var(--color-error);">⚠️ Weaknesses</strong>
+            <ul style="margin: 0.5rem 0 0; font-size: 0.9rem; padding-left: 1.25rem;">
+              <li>Proprietary, closed source</li>
+              <li>$20/mo for good models</li>
+              <li>Index lag on huge repos</li>
+              <li>No autonomous agent mode</li>
+              <li>Vendor lock-in risk</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="margin-top: 1.5rem; padding: 1rem; background: var(--color-bg); border-radius: var(--radius-md); border-left: 3px solid var(--color-accent);">
+          <strong>💰 Real Cost:</strong> $20/mo Pro = unlimited GPT-4o + Claude 3.5 Sonnet + fast requests. Business $40 adds SSO, audit logs, privacy mode enforcement.
+        </div>
+      </div>
+    </article>
+
+    <article class="card" style="margin-bottom: 1.5rem;">
+      <div class="card-header" style="background: linear-gradient(90deg, rgba(34, 197, 94, 0.2), transparent); border-bottom: 1px solid var(--color-success);">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <div style="font-size: 3rem;">🤝</div>
+          <div>
+            <h3 style="margin: 0;">Aider — The Terminal Purist</h3>
+            <p style="margin: 0.25rem 0 0; color: var(--color-text-secondary);">Git-native pair programmer. Lives in your shell. Speaks diff fluently.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Philosophy: Every Edit is a Commit</h4>
+        <p>Aider doesn't "apply changes" — it creates git commits. You review with <code>git diff</code>, <code>git log --oneline</code>, <code>git reset</code>. Your history stays clean. Your workflow stays yours.</p>
+        
+        <h4>Repo Map (The Secret Weapon)</h4>
+        <p>Instead of stuffing 100k tokens of context, Aider builds a <strong>tree-sitter powered map</strong> of your codebase: symbols, imports, call graphs. It "knows" your code without reading it all. Works on repos of any size.</p>
+        
+        <h4>Bring Your Own Keys</h4>
+        <p>No subscription. You pay API costs directly. Use GPT-4o, Claude 3.5, or local models via Ollama. <strong>A 10k token session costs ~$0.05-0.15.</strong> For daily use: ~$5-15/mo vs $20 fixed.</p>
+        
+        <div class="grid grid-2" style="gap: 1rem; margin-top: 1rem;">
+          <div class="card" style="padding: 1rem; background: rgba(63, 185, 80, 0.1); border-color: var(--color-success);">
+            <strong style="color: var(--color-success);">✅ Strengths</strong>
+            <ul style="margin: 0.5rem 0 0; font-size: 0.9rem; padding-left: 1.25rem;">
+              <li>Zero lock-in, open source</li>
+              <li>Git-native workflow</li>
+              <li>Any model, local or cloud</li>
+              <li>Pay-per-use (often cheaper)</li>
+              <li>Voice input (Whisper)</li>
+              <li>No telemetry</li>
+            </ul>
+          </div>
+          <div class="card" style="padding: 1rem; background: rgba(248, 81, 73, 0.1); border-color: var(--color-error);">
+            <strong style="color: var(--color-error);">⚠️ Weaknesses</strong>
+            <ul style="margin: 0.5rem 0 0; font-size: 0.9rem; padding-left: 1.25rem;">
+              <li>Terminal only (no GUI)</li>
+              <li>No multi-file "composer" view</li>
+              <li>You run tests/builds manually</li>
+              <li>Steeper learning curve</li>
+              <li>API costs unpredictable</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="margin-top: 1.5rem; padding: 1rem; background: var(--color-bg); border-radius: var(--radius-md); border-left: 3px solid var(--color-success);">
+          <strong>💰 Real Cost:</strong> GPT-4o ~$5-15/mo for daily use. Claude 3.5 Sonnet ~$10-30/mo. Local (Ollama) = $0 after hardware. <a href="https://aider.chat/docs/costs.html" target="_blank" rel="noopener">Aider cost calculator →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" style="margin-bottom: 1.5rem;">
+      <div class="card-header" style="background: linear-gradient(90deg, rgba(234, 76, 137, 0.2), transparent); border-bottom: 1px solid #ea4c89;">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <div style="font-size: 3rem;">🧠</div>
+          <div>
+            <h3 style="margin: 0;">Cline — The Autonomous Golem</h3>
+            <p style="margin: 0.25rem 0 0; color: var(--color-text-secondary);">Give it a task. It plans, acts, observes, iterates. Your personal dev agent.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <h4>Autonomous Loop: Plan → Act → Observe → Repeat</h4>
+        <p>You say "add Stripe checkout to the billing page." Cline:</p>
+        <ol style="padding-left: 1.25rem; margin: 1rem 0;">
+          <li><strong>Plans:</strong> Creates todo list (research Stripe API, create webhook, update UI, test)</li>
+          <li><strong>Acts:</strong> Edits files, runs commands, installs packages</li>
+          <li><strong>Observes:</strong> Runs tests, checks build, reads error output</li>
+          <li><strong>Iterates:</strong> Fixes failures, refines, completes todos</li>
+        </ol>
+        
+        <h4>Browser Tool = Live Research</h4>
+        <p>Cline can <strong>browse the web</strong>. It reads Stripe docs, checks GitHub issues, searches Stack Overflow — all mid-task. No more context-switching to browser.</p>
+        
+        <h4>MCP (Model Context Protocol)</h4>
+        <p>Connect to <strong>any external tool</strong>: GitHub API, Linear, Postgres, Redis, your internal APIs. Cline becomes a universal automation interface.</p>
+        
+        <div class="grid grid-2" style="gap: 1rem; margin-top: 1rem;">
+          <div class="card" style="padding: 1rem; background: rgba(234, 76, 137, 0.1); border-color: #ea4c89;">
+            <strong style="color: #ea4c89;">✅ Strengths</strong>
+            <ul style="margin: 0.5rem 0 0; font-size: 0.9rem; padding-left: 1.25rem;">
+              <li>True autonomous agent</li>
+              <li>Browser research built-in</li>
+              <li>MCP extensibility</li>
+              <li>Runs commands & tests</li>
+              <li>Open source (mostly)</li>
+              <li>Any model via OpenRouter</li>
+            </ul>
+          </div>
+          <div class="card" style="padding: 1rem; background: rgba(248, 81, 73, 0.1); border-color: var(--color-error);">
+            <strong style="color: var(--color-error);">⚠️ Weaknesses</strong>
+            <ul style="margin: 0.5rem 0 0; font-size: 0.9rem; padding-left: 1.25rem;">
+              <li>Can go off-rails (needs supervision)</li>
+              <li>API costs can spike</li>
+              <li>VS Code only (for now)</li>
+              <li>Slower for simple edits</li>
+              <li>Occasional loop bugs</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="margin-top: 1.5rem; padding: 1rem; background: var(--color-bg); border-radius: var(--radius-md); border-left: 3px solid #ea4c89;">
+          <strong>💰 Real Cost:</strong> Via OpenRouter: GPT-4o ~$5-20/mo, Claude 3.5 ~$10-40/mo. Local models = free. <em>Set a budget limit in settings.</em>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- Workflow Recommendations -->
+  <section aria-labelledby="workflows">
+    <h2 id="workflows" style="margin: 3rem 0 1.5rem;">Which Sigil for Your Workflow?</h2>
+    <div class="grid grid-2" style="gap: 1rem;">
+      <div class="card">
+        <div class="card-body" style="text-align: center; padding: 2rem;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🏃</div>
+          <h3>Daily Feature Work</h3>
+          <p style="color: var(--color-text-secondary);">Cursor. Composer handles multi-file features. @codebase finds context. Fastest loop.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body" style="text-align: center; padding: 2rem;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🔧</div>
+          <h3>Refactoring / Modernization</h3>
+          <p style="color: var(--color-text-secondary);">Aider. Git commits per change. Repo map handles huge codebases. You review diffs.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body" style="text-align: center; padding: 2rem;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🔬</div>
+          <h3>Research-Heavy Tasks</h3>
+          <p style="color: var(--color-text-secondary);">Cline. "Implement OAuth2 with PKCE using our provider's API." It reads docs, writes code, tests.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body" style="text-align: center; padding: 2rem;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🔒</div>
+          <h3>Privacy / Air-Gapped</h3>
+          <p style="color: var(--color-text-secondary);">Aider + Ollama (local). Zero cloud. Zero telemetry. Your code never leaves.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body" style="text-align: center; padding: 2rem;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">💰</div>
+          <h3>Cost Optimization</h3>
+          <p style="color: var(--color-text-secondary);">Aider (pay-per-use) or Cline (OpenRouter cheap models). Cursor Pro if you want predictable billing.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body" style="text-align: center; padding: 2rem;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">👥</div>
+          <h3>Team Standardization</h3>
+          <p style="color: var(--color-text-secondary);">Cursor Business. Shared .cursorrules, privacy enforcement, SSO, audit logs. IDE everyone knows.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The "Why Not All Three?" Section -->
+  <section class="card" style="margin-top: 3rem; background: linear-gradient(135deg, var(--color-card), var(--color-bg-elevated)); border: 1px solid var(--color-accent);">
+    <div class="card-body" style="padding: 2.5rem;">
+      <h2 style="text-align: center; margin-bottom: 1.5rem;">💡 The Wizard's Secret: Use All Three</h2>
+      <p style="text-align: center; color: var(--color-text-secondary); max-width: 700px; margin: 0 auto 2rem; font-size: 1.1rem;">
+        They're not mutually exclusive. They're <strong>different tools for different incantations</strong>.
+      </p>
+      <div class="grid grid-3" style="gap: 1rem; text-align: center;">
+        <div style="padding: 1.5rem; background: var(--color-bg); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">⚡</div>
+          <strong>Cursor</strong> — Daily driver, features, refactors
+        </div>
+        <div style="padding: 1.5rem; background: var(--color-bg); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🤝</div>
+          <strong>Aider</strong> — Big refactors, cost control, privacy
+        </div>
+        <div style="padding: 1.5rem; background: var(--color-bg); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🧠</div>
+          <strong>Cline</strong> — Research tasks, automation, MCP
+        </div>
+      </div>
+      <p style="text-align: center; color: var(--color-text-secondary); margin-top: 2rem; font-size: 0.95rem;">
+        <strong>Pro tip:</strong> Open Cursor for coding. Keep a terminal tab with Aider for git-heavy work. Invoke Cline when you need research + execution. Your grimoire, your rules.
+      </p>
+    </div>
+  </section>
+
+  <!-- Affiliate Disclosure -->
+  <section style="margin-top: 3rem; padding: 1.5rem; background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); font-size: 0.85rem; color: var(--color-text-secondary); text-align: center;">
+    <p><strong>† Affiliate links</strong> — We earn commission if you subscribe via our links (Cursor, n8n Cloud, Raycast, Linear, Warp). This funds the grimoires. <a href="/disclosure/" style="color: var(--color-accent);">Full disclosure scroll →</a></p>
+  </section>
+</div>
+
+<style>
+.comparison-table {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+.comparison-table table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+.comparison-table th,
+.comparison-table td {
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  text-align: left;
+  vertical-align: top;
+}
+.comparison-table th {
+  background: var(--color-bg-elevated);
+  font-weight: 600;
+  color: var(--color-accent);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.comparison-table td:first-child,
+.comparison-table th:first-child {
+  position: sticky;
+  left: 0;
+  background: var(--color-card);
+  font-weight: 500;
+  z-index: 2;
+}
+.comparison-table tr:hover td {
+  background: var(--color-card-hover);
+}
+.feature-check { color: var(--color-success); font-weight: 600; }
+.feature-cross { color: var(--color-text-muted); }
+.feature-partial { color: var(--color-accent); }
+.best-value { background: rgba(201, 168, 76, 0.1) !important; }
+
+@media (max-width: 768px) {
+  .comparison-table td:first-child,
+  .comparison-table th:first-child { position: static; }
+}
+</style>

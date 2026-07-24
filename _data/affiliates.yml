@@ -1,0 +1,65 @@
+# Affiliate Links Configuration
+# Add your actual affiliate IDs/codes here
+cursor:
+  name: "Cursor"
+  url: "https://cursor.sh"
+  affiliate_url: "https://cursor.sh?ref=YOUR_CURSOR_REF"
+  description: "AI-first code editor built for pair programming with AI"
+  commission: "20% recurring"
+  category: "editor"
+
+n8n_cloud:
+  name: "n8n Cloud"
+  url: "https://n8n.cloud"
+  affiliate_url: "https://n8n.cloud?ref=YOUR_N8N_REF"
+  description: "Workflow automation platform - self-hosted or cloud"
+  commission: "20% recurring"
+  category: "automation"
+
+raycast:
+  name: "Raycast Pro"
+  url: "https://raycast.com/pro"
+  affiliate_url: "https://raycast.com/pro?ref=YOUR_RAYCAST_REF"
+  description: "Lightning-fast launcher with AI, snippets, and extensions"
+  commission: "30% recurring"
+  category: "productivity"
+
+linear:
+  name: "Linear"
+  url: "https://linear.app"
+  affiliate_url: "https://linear.app?ref=YOUR_LINEAR_REF"
+  description: "Issue tracking and project management that developers love"
+  commission: "25% recurring"
+  category: "project_management"
+
+warp:
+  name: "Warp"
+  url: "https://warp.dev"
+  affiliate_url: "https://warp.dev?ref=YOUR_WARP_REF"
+  description: "Terminal reimagined with AI, workflows, and team features"
+  commission: "20% recurring"
+  category: "terminal"
+
+aider:
+  name: "Aider"
+  url: "https://aider.chat"
+  affiliate_url: "https://aider.chat?ref=YOUR_AIDER_REF"
+  description: "AI pair programming in your terminal"
+  commission: "Donation-based"
+  category: "editor"
+
+cline:
+  name: "Cline"
+  url: "https://cline.bot"
+  affiliate_url: "https://cline.bot?ref=YOUR_CLINE_REF"
+  description: "Autonomous coding agent for VS Code"
+  commission: "Open source"
+  category: "editor"
+
+continue_dev:
+  name: "Continue"
+  url: "https://continue.dev"
+  affiliate_url: "https://continue.dev?ref=YOUR_CONTINUE_REF"
+  description: "Open-source AI code assistant for VS Code and JetBrains"
+  commission: "Open source"
+  category: "editor"

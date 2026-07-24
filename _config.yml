@@ -1,0 +1,99 @@
+title: "CodeCitadel"
+description: "CodeCitadel — Where Wizards Build. AI coding agents, automation spells, and developer wizardry for solo devs. Master Cursor, Aider, n8n, and the arcane arts of workflow automation."
+url: "https://HPtesting808.github.io"
+baseurl: "/codecitadel"
+author:
+  name: "CodeCitadel"
+  email: "wizards@codecitadel.dev"
+  twitter: "@CodeCitadel"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+paginate: 10
+paginate_path: "/scrolls/page:num/"
+
+# Collections
+collections:
+  grimoires:
+    output: true
+    permalink: /grimoires/:path/
+  artifacts:
+    output: true
+    permalink: /artifacts/:path/
+  runes:
+    output: true
+    permalink: /runes/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "scroll"
+      author: "CodeCitadel"
+  - scope:
+      path: ""
+      type: "grimoires"
+    values:
+      layout: "grimoire"
+  - scope:
+      path: ""
+      type: "artifacts"
+    values:
+      layout: "artifact"
+  - scope:
+      path: ""
+      type: "runes"
+    values:
+      layout: "rune"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - scripts/
+  - .github/
+
+# SEO
+twitter:
+  username: CodeCitadel
+  card: summary_large_image
+
+social:
+  name: CodeCitadel
+  links:
+    - https://github.com/HPtesting808/codecitadel
+
+# Theme colors
+theme_color: "#0a0f1a"
+accent_color: "#c9a84c"
+glow_color: "#e8c56d"
+dark_bg: "#05080e"
+card_bg: "#0f141f"
+border_color: "#1e2a3a"
+text_primary: "#e8e8e8"
+text_secondary: "#a0a8b0"
+text_muted: "#6a737d"
+
+# Affiliate data (populated from _data/grimoire_affiliates.yml)
+affiliates: []
+
+# Ko-fi username
+kofi_username: ""
+
+# Site metadata
+site_name: "CodeCitadel"
+site_tagline: "Where Wizards Build"
+site_description: "AI coding agents, automation spells, and developer wizardry for solo devs"

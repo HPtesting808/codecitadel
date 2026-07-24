@@ -1,0 +1,256 @@
+# Grimoire of Known Artifacts
+# Detailed tool metadata for comparison tables, runes, and grimoires
+
+cursor:
+  name: "Cursor"
+  sigil: "⚡"
+  tagline: "The AI-first code editor"
+  description: |
+    Cursor is a fork of VS Code built from the ground up for AI-assisted development.
+    It understands your entire codebase, can edit multiple files, and has a built-in
+    chat that sees your project context.
+  website: "https://cursor.sh"
+  pricing:
+    free: "$0/mo — 50 slow GPT-4 uses, 2000 completions"
+    pro: "$20/mo — Unlimited GPT-4, 10x fast requests, Claude 3.5 Sonnet"
+    business: "$40/mo/user — Team features, SSO, audit logs"
+  features:
+    - "Multi-file editing with Composer"
+    - "Codebase-wide chat (@codebase)"
+    - "Inline editing (Cmd+K)"
+    - "Auto-import and fix on save"
+    - "Custom AI rules per project"
+    - "Privacy mode (no code stored)"
+  best_for: "Developers who want VS Code familiarity with best-in-class AI"
+  affiliate_tier: "apprentice"
+  category: "codex"
+
+aider:
+  name: "Aider"
+  sigil: "🤝"
+  tagline: "AI pair programming in your terminal"
+  description: |
+    Aider lets you pair program with LLMs directly in your terminal. It edits files
+    in your git repo, shows diffs, and commits changes. Works with any LLM API.
+  website: "https://aider.chat"
+  pricing:
+    free: "Open source — bring your own API keys"
+    cloud: "Coming soon — hosted inference"
+  features:
+    - "Terminal-native, git-integrated"
+    - "Multi-file edits with diffs"
+    - "Voice input support"
+    - "Works with GPT-4, Claude, local models"
+    - "Repo map for large codebases"
+    - "No telemetry by default"
+  best_for: "Terminal dwellers who want AI without leaving their shell"
+  affiliate_tier: "apprentice"
+  category: "codex"
+
+cline:
+  name: "Cline"
+  sigil: "🧠"
+  tagline: "Autonomous coding agent for VS Code"
+  description: |
+    Cline (formerly Claude Dev) is an autonomous agent that can read, write, and
+    execute code in your workspace. It plans tasks, runs commands, and iterates.
+  website: "https://cline.bot"
+  pricing:
+    free: "Open source — bring your own API keys"
+  features:
+    - "Autonomous task execution"
+    - "Browser automation for research"
+    - "File system operations"
+    - "Command execution with approval"
+    - "Plan-act-observe loops"
+    - "Model Context Protocol (MCP) support"
+  best_for: "Devs who want an agent that plans and executes multi-step tasks"
+  affiliate_tier: "adept"
+  category: "codex"
+
+continue_dev:
+  name: "Continue"
+  sigil: "▶️"
+  tagline: "Open-source AI code assistant"
+  description: |
+    Continue is an open-source AI code assistant you can self-host. Supports any
+    model via Ollama, local LLMs, or cloud APIs. Extensible with custom context
+    providers and slash commands.
+  website: "https://continue.dev"
+  pricing:
+    free: "Open source — self-hosted"
+    enterprise: "Contact for managed service"
+  features:
+    - "Fully open source (Apache 2.0)"
+    - "Local model support via Ollama"
+    - "Custom context providers"
+    - "Slash commands and autocomplete"
+    - "IDE agnostic (VS Code, JetBrains)"
+    - "Enterprise self-hosting"
+  best_for: "Teams needing data privacy and customization"
+  affiliate_tier: "apprentice"
+  category: "codex"
+
+n8n:
+  name: "n8n"
+  sigil: "🔮"
+  tagline: "Workflow automation for technical teams"
+  description: |
+    n8n (nodemation) is a fair-code workflow automation tool. Connect 400+ services,
+    write custom code nodes, self-host on your infrastructure. The wizard's choice
+    for complex automation spells.
+  website: "https://n8n.io"
+  pricing:
+    cloud_starter: "$20/mo — 2.5k executions, 5 workflows"
+    cloud_pro: "$50/mo — 10k executions, unlimited workflows"
+    enterprise: "Custom — SSO, audit, dedicated support"
+    self_hosted: "Free — unlimited on your infrastructure"
+  features:
+    - "400+ pre-built integrations"
+    - "Custom code nodes (JS/Python)"
+    - "Webhook triggers and HTTP requests"
+    - "Self-hosted with Docker/K8s"
+    - "Binary data handling"
+    - "Error workflows and retry logic"
+  best_for: "Devs who want Zapier power without vendor lock-in"
+  affiliate_tier: "adept"
+  category: "automation"
+
+raycast:
+  name: "Raycast"
+  sigil: "✨"
+  tagline: "Your Mac's command center"
+  description: |
+    Raycast replaces Spotlight with an extensible launcher. AI chat, snippets,
+    window management, clipboard history, and 1000+ extensions. Pro adds AI,
+    team sharing, and custom themes.
+  website: "https://raycast.com"
+  pricing:
+    free: "$0 — Core launcher, extensions, snippets"
+    pro: "$8/mo — AI chat, cloud sync, team sharing"
+    team: "$12/mo/user — Shared commands, analytics"
+  features:
+    - "AI chat with GPT-4/Claude"
+    - "Custom extensions (React/TypeScript)"
+    - "Window management"
+    - "Clipboard history"
+    - "Script commands"
+    - "Team synchronization"
+  best_for: "Mac power users who want everything at ⌘+Space"
+  affiliate_tier: "adept"
+  category: "productivity"
+
+linear:
+  name: "Linear"
+  sigil: "📜"
+  tagline: "Issue tracking that doesn't suck"
+  description: |
+    Linear is opinionated issue tracking for product teams. Fast, keyboard-first,
+    with cycles, projects, and GitHub/GitLab sync. The tool that makes PM work
+    feel like craft.
+  website: "https://linear.app"
+  pricing:
+    free: "$0 — Unlimited members, 250 issues"
+    standard: "$8/mo/user — Unlimited issues, custom workflows"
+    plus: "$14/mo/user — Advanced analytics, SAML"
+  features:
+    - "Cycles (sprints) and projects"
+    - "GitHub/GitLab two-way sync"
+    - "Keyboard-first everything"
+    - "Custom views and filters"
+    - "Roadmaps and insights"
+    - "API and webhooks"
+  best_for: "Teams who want Jira's power without the pain"
+  affiliate_tier: "master"
+  category: "project_management"
+
+warp:
+  name: "Warp"
+  sigil: "🌀"
+  tagline: "Terminal for the 21st century"
+  description: |
+    Warp is a Rust-based terminal with AI, blocks, workflows, and team features.
+    Input editor with completions, command output as blocks, shared warps for teams.
+  website: "https://warp.dev"
+  pricing:
+    free: "$0 — Personal use, AI (20 req/day)"
+    pro: "$15/mo — Unlimited AI, team warps, SSO"
+    enterprise: "Custom — Audit, compliance, dedicated support"
+  features:
+    - "AI command suggestions"
+    - "Blocks (structured output)"
+    - "Workflows (parameterized commands)"
+    - "Team Warps (shared commands)"
+    - "Modern input editor"
+    - "Themes and customization"
+  best_for: "Devs who live in the terminal and want superpowers"
+  affiliate_tier: "apprentice"
+  category: "terminal"
+
+github_copilot:
+  name: "GitHub Copilot"
+  sigil: "👻"
+  tagline: "Your AI pair programmer"
+  description: |
+    The original AI coding assistant. Integrates with VS Code, JetBrains, Neovim,
+    and GitHub.com. Chat, inline completions, pull request summaries, and code review.
+  website: "https://github.com/features/copilot"
+  pricing:
+    individual: "$10/mo — Unlimited chat, completions, PR summaries"
+    business: "$19/mo/user — Org policy, proxy, audit logs"
+    enterprise: "$39/mo/user — Fine-tuning, custom models"
+  features:
+    - "Inline code completions"
+    - "Chat in IDE and GitHub.com"
+    - "Pull request summaries"
+    - "Code review assistance"
+    - "Copilot Workspace (preview)"
+    - "Multiple model options"
+  best_for: "Teams already in GitHub ecosystem"
+  affiliate_tier: "master"
+  category: "codex"
+
+sourcegraph_cody:
+  name: "Cody by Sourcegraph"
+  sigil: "🔍"
+  tagline: "AI that knows your entire codebase"
+  description: |
+    Cody uses Sourcegraph's code graph to understand your entire codebase — not
+    just open files. Best for large monorepos and cross-repo context.
+  website: "https://sourcegraph.com/cody"
+  pricing:
+    free: "$0 — 200 chats/mo, local context"
+    pro: "$9/mo — Unlimited, remote context"
+    enterprise: "Custom — Self-hosted, fine-tuning"
+  features:
+    - "Whole-codebase context"
+    - "Code graph navigation"
+    - "Multi-repo awareness"
+    - "Custom retrieval"
+    - "IDE integrations"
+    - "Self-hosted option"
+  best_for: "Large codebases, enterprises, monorepos"
+  affiliate_tier: "master"
+  category: "codex"
+
+cursor_cloud:
+  name: "Cursor Cloud"
+  sigil: "☁️"
+  tagline: "Remote Cursor environments"
+  description: |
+    Spin up Cursor environments in the cloud. Pre-configured, persistent, accessible
+    from any browser. Perfect for iPad coding, Chromebooks, or zero-setup onboarding.
+  website: "https://cursor.sh/cloud"
+  pricing:
+    free: "Coming soon — limited hours"
+    pro: "$20/mo — Included with Cursor Pro"
+  features:
+    - "Browser-based IDE"
+    - "Persistent environments"
+    - "GitHub integration"
+    - "Prebuilt templates"
+    - "Team environments"
+    - "GPU support (coming)"
+  best_for: "Remote dev, iPad coding, instant onboarding"
+  affiliate_tier: "master"
+  category: "cloud"

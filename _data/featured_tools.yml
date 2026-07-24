@@ -1,0 +1,79 @@
+- name: "Cursor"
+  emoji: "⚡"
+  tagline: "AI-first code editor"
+  description: "VS Code fork built for AI pair programming with multi-file editing"
+  category: "Codex"
+  url: "https://cursor.sh?ref=YOUR_CURSOR_REF"
+  affiliate: true
+  tier: "apprentice"
+  color: "#0066cc"
+
+- name: "n8n"
+  emoji: "🔮"
+  tagline: "Workflow automation"
+  description: "Fair-code automation with 400+ integrations, self-hosted or cloud"
+  category: "Automation"
+  url: "https://n8n.cloud?ref=YOUR_N8N_REF"
+  affiliate: true
+  tier: "adept"
+  color: "#ea4c89"
+
+- name: "Raycast"
+  emoji: "✨"
+  tagline: "Mac command center"
+  description: "Extensible launcher with AI, snippets, window management"
+  category: "Productivity"
+  url: "https://raycast.com/pro?ref=YOUR_RAYCAST_REF"
+  affiliate: true
+  tier: "adept"
+  color: "#ff6b35"
+
+- name: "Linear"
+  emoji: "📜"
+  tagline: "Issue tracking evolved"
+  description: "Fast, keyboard-first project management with GitHub sync"
+  category: "Project Mgmt"
+  url: "https://linear.app?ref=YOUR_LINEAR_REF"
+  affiliate: true
+  tier: "master"
+  color: "#5e6ad2"
+
+- name: "Warp"
+  emoji: "🌀"
+  tagline: "Terminal reimagined"
+  description: "Rust-based terminal with AI, blocks, workflows, team features"
+  category: "Terminal"
+  url: "https://warp.dev?ref=YOUR_WARP_REF"
+  affiliate: true
+  tier: "apprentice"
+  color: "#fd7c2a"
+
+- name: "Aider"
+  emoji: "🤝"
+  tagline: "Terminal pair programming"
+  description: "Git-integrated AI coding in your terminal, any LLM"
+  category: "Codex"
+  url: "https://aider.chat"
+  affiliate: false
+  tier: "apprentice"
+  color: "#3fb950"
+
+- name: "Cline"
+  emoji: "🧠"
+  tagline: "Autonomous VS Code agent"
+  description: "Plans and executes multi-step coding tasks with MCP support"
+  category: "Codex"
+  url: "https://cline.bot"
+  affiliate: false
+  tier: "adept"
+  color: "#a855f7"
+
+- name: "GitHub Copilot"
+  emoji: "👻"
+  tagline: "The original AI pair programmer"
+  description: "Inline completions, chat, PR summaries, code review"
+  category: "Codex"
+  url: "https://github.com/features/copilot"
+  affiliate: false
+  tier: "master"
+  color: "#000"

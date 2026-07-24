@@ -1,0 +1,228 @@
+---
+layout: default
+title: "CodeCitadel — Where Wizards Build"
+description: "AI coding agents, automation spells, and developer wizardry for solo devs. Tutorials, comparisons, and battle-tested setups."
+---
+
+<!-- Hero -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-badge animate-fade-in-up">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 16px; height: 16px; margin-right: 0.5rem;"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        <strong>CodeCitadel</strong> v1.0 — The Grimoire is Open
+      </span>
+      <h1 id="hero-title" class="hero-title animate-fade-in-up delay-1">Where Wizards Build</h1>
+      <p class="hero-subtitle animate-fade-in-up delay-2">AI coding agents. Automation spells. Terminal wizardry. The definitive grimoire for solo developers who command code with intent.</p>
+      <div class="hero-actions animate-fade-in-up delay-3">
+        <a href="/grimoires/" class="btn btn-primary btn-lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          Open the Grimoires
+        </a>
+        <a href="/artifacts/" class="btn btn-secondary btn-lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px;"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          Claim Artifacts
+        </a>
+      </div>
+      <div class="hero-trust animate-fade-in-up delay-4">
+        <div class="trust-badges">
+          <span class="badge">⚡ Cursor</span>
+          <span class="badge">🔮 n8n</span>
+          <span class="badge">🤝 Aider</span>
+          <span class="badge">🧠 Cline</span>
+          <span class="badge">✨ Raycast</span>
+          <span class="badge">📜 Linear</span>
+          <span class="badge">🌀 Warp</span>
+        </div>
+        <p class="trust-note">12+ Grimoires • 6 Artifacts • 3 Runes • Updated weekly</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Grimoires -->
+<section class="section" aria-labelledby="grimoires-title">
+  <div class="container">
+    <header class="section-header">
+      <h2 id="grimoires-title" class="section-title">Latest Grimoires</h2>
+      <p class="section-subtitle">Deep-dive tutorials, comparisons, and battle-tested setups for the modern code wizard</p>
+    </header>
+    <div class="card-grid" id="grimoires-grid">
+      {% for post in site.posts limit:6 %}
+        <article class="card">
+          <a href="{{ post.url | relative_url }}" class="card-link">
+            <div class="card-header">
+              <div class="card-meta">
+                {% if post.categories %}
+                  {% for cat in post.categories limit:1 %}
+                    <span class="card-tag">{{ cat | capitalize }}</span>
+                  {% endfor %}
+                {% endif %}
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">{{ post.title }}</h3>
+              <p class="card-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+            </div>
+            <div class="card-footer">
+              <span class="card-meta">{{ post.reading_time | default: "8 min read" }}</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px; color: var(--color-accent);"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+    <div class="text-center" style="margin-top: 2rem;">
+      <a href="/grimoires/" class="btn btn-secondary">View All Grimoires →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Artifacts -->
+<section class="section" style="background: linear-gradient(180deg, transparent, var(--color-card), transparent);" aria-labelledby="artifacts-title">
+  <div class="container">
+    <header class="section-header">
+      <h2 id="artifacts-title" class="section-title">Featured Artifacts</h2>
+      <p class="section-subtitle">Starter kits, templates, scripts, and cheatsheets — ready to deploy</p>
+    </header>
+    <div class="card-grid" id="artifacts-grid">
+      {% for artifact in site.data.featured_artifacts limit:4 %}
+        <article class="card">
+          <a href="{{ artifact.url | relative_url }}" class="card-link">
+            <div class="card-header">
+              <div style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">{{ artifact.icon }}</div>
+              <div class="card-meta">
+                <span class="card-tag">{{ artifact.type }}</span>
+                <span class="card-tag">{{ artifact.category }}</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">{{ artifact.name }}</h3>
+              <p class="card-excerpt">{{ artifact.description }}</p>
+            </div>
+            <div class="card-footer">
+              <span class="card-meta">Claim Artifact</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px; color: var(--color-accent);"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+    <div class="text-center" style="margin-top: 2rem;">
+      <a href="/artifacts/" class="btn btn-secondary">Browse All Artifacts →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Runes Section -->
+<section class="section" aria-labelledby="runes-title">
+  <div class="container">
+    <header class="section-header">
+      <h2 id="runes-title" class="section-title">Runes of Power</h2>
+      <p class="section-subtitle">Workflows, prompts, and scripts you can copy into your grimoire today</p>
+    </header>
+    <div class="grid grid-3">
+      <article class="card">
+        <div class="card-body">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">📜</div>
+          <h3 class="card-title">Workflows</h3>
+          <p class="card-excerpt">n8n automation spells for PR review, issue triage, test generation, deploy triggers, and more.</p>
+        </div>
+        <div class="card-footer">
+          <a href="/runes/workflows/" class="btn btn-ghost btn-sm">Explore →</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🪄</div>
+          <h3 class="card-title">Prompt Library</h3>
+          <p class="card-excerpt">Battle-tested prompts for code review, refactoring, architecture, debugging, and docs.</p>
+        </div>
+        <div class="card-footer">
+          <a href="/runes/prompts/" class="btn btn-ghost btn-sm">Explore →</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">⚡</div>
+          <h3 class="card-title">Scripts</h3>
+          <p class="card-excerpt">CLI tools for repo maps, workflow generators, artifact builders, and CI/CD helpers.</p>
+        </div>
+        <div class="card-footer">
+          <a href="/runes/scripts/" class="btn btn-ghost btn-sm">Explore →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Comparison Versus -->
+<section class="section" style="background: linear-gradient(180deg, transparent, rgba(201, 168, 76, 0.03), transparent);" aria-labelledby="versus-title">
+  <div class="container">
+    <header class="section-header">
+      <h2 id="versus-title" class="section-title">Versus Arenas</h2>
+      <p class="section-subtitle">Head-to-head duels. No marketing fluff. Real workflows, real costs, real verdicts.</p>
+    </header>
+    <div class="grid grid-3">
+      <article class="card">
+        <div class="card-body" style="text-align: center;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">⚔️</div>
+          <h3 class="card-title">Cursor vs Aider vs Cline</h3>
+          <p class="card-excerpt">The three-way codex duel. Who wins for daily driving, refactoring, and agentic tasks?</p>
+        </div>
+        <div class="card-footer">
+          <a href="/compare/cursor-vs-aider-vs-cline/" class="btn btn-primary btn-sm">Read Verdict →</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body" style="text-align: center;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔮</div>
+          <h3 class="card-title">n8n vs Zapier vs Make</h3>
+          <p class="card-excerpt">Automation trinity tested. Self-hosted power vs cloud convenience vs visual builder.</p>
+        </div>
+        <div class="card-footer">
+          <a href="/compare/n8n-vs-zapier-vs-make/" class="btn btn-ghost btn-sm">Coming Soon</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body" style="text-align: center;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌀</div>
+          <h3 class="card-title">Warp vs Ghostty vs WezTerm</h3>
+          <p class="card-excerpt">Modern terminal showdown. AI features, GPU rendering, Lua config, team workflows.</p>
+        </div>
+        <div class="card-footer">
+          <a href="/compare/warp-vs-ghostty-vs-wezterm/" class="btn btn-ghost btn-sm">Coming Soon</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter CTA -->
+<section class="section" aria-labelledby="newsletter-title">
+  <div class="container">
+    <div class="newsletter">
+      <h2 id="newsletter-title">Join the Order</h2>
+      <p>Weekly scroll: one grimoire, one artifact, one rune. No spam. Unsubscribe with a thought.</p>
+      <form class="newsletter-form" action="https://api.buttondown.email/v1/subscribers" method="POST" target="_blank">
+        <input type="email" name="email" placeholder="your@grimoire.com" required aria-label="Email address">
+        <button type="submit" class="btn btn-primary">Summon the Scroll</button>
+      </form>
+      <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--color-text-muted);">Powered by Buttondown. <a href="/privacy/">Privacy scroll</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer CTA -->
+<section class="section" style="background: var(--color-card); border-top: 1px solid var(--color-border);" aria-labelledby="support-title">
+  <div class="container" style="text-align: center; max-width: 600px;">
+    <h2 id="support-title" style="margin-bottom: 1rem;">Sustain the Sigils</h2>
+    <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">Every grimoire is free. Every artifact is open. Your support keeps the forge burning.</p>
+    <a href="https://ko-fi.com/codecitadel" target="_blank" rel="noopener" class="btn btn-kofi btn-lg" style="display: inline-flex;">
+      <svg viewBox="0 0 24 24" fill="currentColor" style="width: 20px; height: 20px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+      <span>Buy a Mana Potion (Ko-fi)</span>
+    </a>
+    <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--color-text-muted);">☕ One-time or monthly • No platform fees on Ko-fi • <a href="/support/" style="color: var(--color-accent);">Other ways to support</a></p>
+  </div>
+</section>

@@ -1,0 +1,151 @@
+---
+layout: default
+title: "Artifacts — CodeCitadel"
+description: "Starter kits, templates, scripts, and cheatsheets. Ready-to-deploy artifacts for the modern code wizard."
+---
+
+<header class="page-header" style="padding: 4rem 0 2rem; text-align: center;">
+  <h1 class="page-title">Artifacts</h1>
+  <p class="page-subtitle">Claim these forged tools. Deploy. Customize. Conquer.</p>
+</header>
+
+<div class="container">
+  <!-- Filter -->
+  <div class="filter-tabs" style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-bottom: 3rem;" role="tablist" aria-label="Filter artifacts by type">
+    <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All Artifacts</button>
+    <button class="filter-tab" data-filter="starter-kit" role="tab" aria-selected="false">Starter Kits</button>
+    <button class="filter-tab" data-filter="template" role="tab" aria-selected="false">Templates</button>
+    <button class="filter-tab" data-filter="workflow" role="tab" aria-selected="false">Workflows</button>
+    <button class="filter-tab" data-filter="script" role="tab" aria-selected="false">Scripts</button>
+    <button class="filter-tab" data-filter="cheatsheet" role="tab" aria-selected="false">Cheatsheets</button>
+    <button class="filter-tab" data-filter="mcp" role="tab" aria-selected="false">MCP Servers</button>
+  </div>
+
+  <!-- Featured -->
+  <h2 style="margin-bottom: 1.5rem;">Featured Artifacts</h2>
+  <div class="card-grid" id="featured-artifacts">
+    {% for artifact in site.data.featured_artifacts %}
+      {% if artifact.featured %}
+        <article class="card artifact-card" data-type="{{ artifact.type | downcase | replace: ' ', '-' }}" data-category="{{ artifact.category | downcase }}">
+          <a href="{{ artifact.url | relative_url }}" class="card-link">
+            <div class="card-header">
+              <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">{{ artifact.icon }}</div>
+              <div class="card-meta">
+                <span class="card-tag">{{ artifact.type }}</span>
+                <span class="card-tag">{{ artifact.category }}</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">{{ artifact.name }}</h3>
+              <p class="card-excerpt">{{ artifact.description }}</p>
+            </div>
+            <div class="card-footer">
+              <span class="card-meta">Claim</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px; color: var(--color-accent);"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <!-- All Artifacts -->
+  <h2 style="margin: 4rem 0 1.5rem;">All Artifacts</h2>
+  <div class="card-grid" id="all-artifacts-grid">
+    {% for artifact in site.data.featured_artifacts %}
+      <article class="card artifact-card" data-type="{{ artifact.type | downcase | replace: ' ', '-' }}" data-category="{{ artifact.category | downcase }}">
+        <a href="{{ artifact.url | relative_url }}" class="card-link">
+          <div class="card-header">
+            <div style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">{{ artifact.icon }}</div>
+            <div class="card-meta">
+              <span class="card-tag">{{ artifact.type }}</span>
+              <span class="card-tag">{{ artifact.category }}</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">{{ artifact.name }}</h3>
+            <p class="card-excerpt">{{ artifact.description }}</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-meta">Claim</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px; color: var(--color-accent);"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+      </article>
+    {% endfor %}
+  </div>
+
+  {% if site.data.featured_artifacts.size == 0 %}
+    <div class="empty-state" style="text-align: center; padding: 4rem 2rem;">
+      <div style="font-size: 4rem; margin-bottom: 1rem;">📦</div>
+      <h2>No Artifacts Forged Yet</h2>
+      <p style="color: var(--color-text-secondary); max-width: 400px; margin: 1rem auto;">The forge is cold. The smiths are preparing the first batch. Return when the hammers fall.</p>
+    </div>
+  {% endif %}
+</div>
+
+<!-- Categories -->
+<section class="section" style="background: var(--color-card); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+  <div class="container">
+    <h2 style="text-align: center; margin-bottom: 2rem;">Artifact Categories</h2>
+    <div class="grid grid-3" style="max-width: 900px; margin: 0 auto;">
+      <a href="/artifacts/starter-kits/" class="card" style="text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🚀</div>
+        <h3>Starter Kits</h3>
+        <p style="color: var(--color-text-secondary); font-size: 0.9rem;">Full project templates with CI/CD, Cursor rules, n8n workflows, and deployment configs.</p>
+      </a>
+      <a href="/artifacts/templates/" class="card" style="text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">📄</div>
+        <h3>Templates</h3>
+        <p style="color: var(--color-text-secondary); font-size: 0.9rem;">Cursor rules, PR templates, issue templates, gitignore, docker-compose for every stack.</p>
+      </a>
+      <a href="/artifacts/workflows/" class="card" style="text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔮</div>
+        <h3>Workflows</h3>
+        <p style="color: var(--color-text-secondary); font-size: 0.9rem;">n8n automation spells: PR review, issue triage, test gen, deploy, monitoring.</p>
+      </a>
+      <a href="/artifacts/scripts/" class="card" style="text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">⚡</div>
+        <h3>Scripts & CLIs</h3>
+        <p style="color: var(--color-text-secondary); font-size: 0.9rem;">Repo map generators, artifact builders, workflow creators, CI helpers.</p>
+      </a>
+      <a href="/artifacts/cheatsheets/" class="card" style="text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">📋</div>
+        <h3>Cheatsheets</h3>
+        <p style="color: var(--color-text-secondary); font-size: 0.9rem;">One-page references for Warp, Aider, Cline, n8n, git, tmux, regex.</p>
+      </a>
+      <a href="/artifacts/mcp/" class="card" style="text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔌</div>
+        <h3>MCP Servers</h3>
+        <p style="color: var(--color-text-secondary); font-size: 0.9rem;">Model Context Protocol servers for GitHub, Linear, Postgres, Redis, custom APIs.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.filter-tab');
+  const cards = document.querySelectorAll('.artifact-card');
+  
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      
+      const filter = tab.dataset.filter;
+      cards.forEach(card => {
+        const type = card.dataset.type;
+        const category = card.dataset.category;
+        if (filter === 'all' || type.includes(filter) || category.includes(filter)) {
+          card.style.display = 'flex';
+          card.style.animation = 'fadeInUp 0.4s ease forwards';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>
