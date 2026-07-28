@@ -2,7 +2,7 @@
 
 Where wizards build. Free grimoires on AI automation — Cursor, n8n, Aider, and the tools that let you ship faster.
 
-[!["Buy Me a Coffee at ko-fi.com/codecitadel"](https://img.shields.io/badge/Ko--fi-Support%20Me-FF5E5B?logo=kofi&logoColor=white)](https://ko-fi.com/codecitadel)
+[!["Elixir for the Wizard at ko-fi.com/codecitadel"](https://img.shields.io/badge/Ko--fi-Elixir%20for%20the%20Wizard-d49aa8?logo=kofi&logoColor=white)](https://ko-fi.com/codecitadel)
 
 ## Grimoires 📜
 
