@@ -1,30 +1,255 @@
 ---
 layout: default
-title: "CodeCitadel — Transcribing the Grimoires"
-description: "The forge is active. The scribes are transcribing the definitive guides for AI coding agents and automation. Coming soon."
+title: "CodeCitadel — Where Wizards Build"
+description: "Free grimoires on AI coding agents, automation spells, and developer wizardry. Master Cursor, Aider, Cline, n8n, and the arcane arts of shipping code."
 ---
 
-<section class="hero" style="min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+<style>
+.hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(ellipse at 50% 30%, rgba(212, 154, 168, 0.08), transparent 60%);
+  padding: 4rem 0;
+}
+.hero-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+  background: linear-gradient(135deg, var(--color-text-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 1.5rem auto 2.5rem;
+  line-height: 1.7;
+}
+.hero-grimoire {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.5rem;
+  opacity: 0.8;
+}
+.featured-section {
+  padding: 3rem 0;
+}
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.grimoire-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.grimoire-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-accent);
+}
+.grimoire-card-body {
+  padding: 1.5rem;
+}
+.grimoire-card-tag {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  background: rgba(201, 168, 76, 0.12);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+}
+.grimoire-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+}
+.grimoire-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+.grimoire-card-footer {
+  padding: 0.75rem 1.5rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.grimoire-card-footer a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+.grimoire-card-footer a:hover {
+  text-decoration: underline;
+}
+.pipeline-section {
+  padding: 3rem 0;
+}
+.pipeline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.pipeline-item {
+  padding: 1.25rem;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+.pipeline-item .icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.pipeline-item h4 {
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+}
+.pipeline-item p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+.kofi-section {
+  padding: 3rem 0;
+  text-align: center;
+}
+.kofi-card {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(212, 154, 168, 0.08), rgba(201, 168, 76, 0.05));
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+}
+</style>
+
+<section class="hero">
   <div class="container">
-    <div class="hero-content">
-      <div style="font-size: 5rem; margin-bottom: 2rem;" class="animate-pulse">📜</div>
-      <h1 class="hero-title" style="font-size: clamp(2rem, 8vw, 4rem);">The Grimoires are being transcribed</h1>
-      <p class="hero-subtitle" style="font-size: 1.2rem; margin-bottom: 3rem;">
-        CodeCitadel is currently in a state of deep transcription. <br>
-        We are forging the ultimate guides for AI coding agents and automation spells.
-      </p>
-      <div class="hero-actions">
-        <div class="btn btn-secondary" style="cursor: default;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px; margin-right: 0.5rem;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          Return in a few moon-cycles
+    <div class="hero-grimoire">
+      <svg viewBox="0 0 64 64" fill="none">
+        <rect x="8" y="4" width="48" height="56" rx="6" stroke="#d49aa8" stroke-width="2" fill="rgba(212,154,168,0.1)"/>
+        <path d="M18 18h28M18 28h28M18 38h20" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="48" cy="44" r="8" stroke="#d49aa8" stroke-width="2" fill="rgba(212,154,168,0.15)"/>
+        <path d="M48 40v8M44 44h8" stroke="#d49aa8" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <h1 class="hero-title">Grimoires for<br>the Modern Wizard</h1>
+    <p class="hero-subtitle">
+      AI coding agents, automation spells, and developer tooling —<br>
+      transcribed for solo devs who ship.
+    </p>
+    <a href="/codecitadel/compare/cursor-vs-aider-vs-cline/" class="btn" style="padding: 0.85rem 2rem; font-size: 1rem;">
+      ⚡ Read the Latest Grimoire
+    </a>
+  </div>
+</section>
+
+<section class="featured-section">
+  <div class="container">
+    <h2 style="margin-bottom: 0.5rem;">📜 Latest Grimoires</h2>
+    <p style="color: var(--color-text-secondary); margin-bottom: 0;">Freshly transcribed.</p>
+
+    <div class="featured-grid">
+      <div class="grimoire-card">
+        <div class="grimoire-card-body">
+          <span class="grimoire-card-tag">⚔️ Versus Arena</span>
+          <h3>Cursor vs Aider vs Cline</h3>
+          <p>Three AI coding agents enter. One earns a permanent sigil on your toolbar. Features, pricing, real-world performance — the definitive duel.</p>
+        </div>
+        <div class="grimoire-card-footer">
+          <span>July 28, 2026</span>
+          <a href="/codecitadel/compare/cursor-vs-aider-vs-cline/">Read →</a>
+        </div>
+      </div>
+
+      <div class="grimoire-card" style="opacity: 0.5;">
+        <div class="grimoire-card-body">
+          <span class="grimoire-card-tag">🔧 Automation</span>
+          <h3>n8n for Solo Devs</h3>
+          <p>Workflow automation without giving up control. Coming soon.</p>
+        </div>
+        <div class="grimoire-card-footer">
+          <span>In the forge</span>
+          <span style="color: var(--color-text-muted);">—</span>
+        </div>
+      </div>
+
+      <div class="grimoire-card" style="opacity: 0.5;">
+        <div class="grimoire-card-body">
+          <span class="grimoire-card-tag">⚙️ Productivity</span>
+          <h3>The Raycast Incantation</h3>
+          <p>Your macOS productivity portal, fully weaponized. Coming soon.</p>
+        </div>
+        <div class="grimoire-card-footer">
+          <span>In the forge</span>
+          <span style="color: var(--color-text-muted);">—</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<style>
-.hero {
-  background: radial-gradient(circle at center, rgba(201, 168, 76, 0.1) 0%, transparent 70%);
-}
-</style>
+<section class="pipeline-section">
+  <div class="container">
+    <h2 style="margin-bottom: 0.25rem;">🔮 The Forge</h2>
+    <p style="color: var(--color-text-secondary); margin-bottom: 1rem;">Grimoires currently being transcribed — affiliate links pending where noted.</p>
+
+    <div class="pipeline-grid">
+      <div class="pipeline-item">
+        <div class="icon">🔄</div>
+        <h4>n8n Automation</h4>
+        <p>Workflow spells for solo devs. Affiliate link pending.</p>
+      </div>
+      <div class="pipeline-item">
+        <div class="icon">📋</div>
+        <h4>Linear vs Alternatives</h4>
+        <p>Project management for wizards. Affiliate link pending.</p>
+      </div>
+      <div class="pipeline-item">
+        <div class="icon">⚙️</div>
+        <h4>Raycast Workflows</h4>
+        <p>macOS productivity portal. Affiliate link pending.</p>
+      </div>
+      <div class="pipeline-item">
+        <div class="icon">🖥️</div>
+        <h4>Warp Terminal</h4>
+        <p>Modern terminal with AI. Affiliate link pending.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="kofi-section">
+  <div class="container">
+    <div class="kofi-card">
+      <h3 style="margin-bottom: 0.75rem;">☕ Sustain the Arcanum</h3>
+      <p style="color: var(--color-text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem;">
+        These grimoires take moon-cycles to forge. If the knowledge serves you, an elixir for the wizard keeps the scribes writing.
+      </p>
+      <a href="https://ko-fi.com/codecitadel" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: #d49aa8; color: #0a0f1a; border-radius: 999px; font-weight: 600; font-size: 0.9rem; text-decoration: none;">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+        ☕ Elixir for the Wizard
+      </a>
+    </div>
+  </div>
+</section>
