@@ -1,7 +1,8 @@
 ---
 layout: default
-title: "Cursor vs Aider vs Cline — The Three-Way Codex Duel"
-description: "We pit the three strongest AI coding agents against each other in a battle of features, pricing, workflows, and real-world performance. Which familiar deserves your keystrokes?"
+title: "Cursor vs Aider vs Cline — Which AI Coding Tool Actually Ships?"
+description: "We put the three most powerful AI coding agents through a gauntlet of real-world tests — features, pricing, workflows, and which one earns a permanent spot in your grimoire."
+date: 2026-07-28
 ---
 
 <header class="page-header" style="padding: 4rem 0 2rem; text-align: center; background: linear-gradient(180deg, rgba(201, 168, 76, 0.1), transparent);">
@@ -9,13 +10,33 @@ description: "We pit the three strongest AI coding agents against each other in 
   <h1 class="page-title">Cursor vs Aider vs Cline</h1>
   <p class="page-subtitle">Three wizards enter. One earns a permanent sigil on your toolbar.</p>
   <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; color: var(--color-text-muted); font-size: 0.9rem;">
-    <span>📅 {{ page.date | date: "%B %d, %Y" }}</span>
-    <span>⏱️ {{ page.reading_time }}</span>
+    <span>📅 July 28, 2026</span>
+    <span>⏱️ 9 min read</span>
     <span>⚔️ Comparison</span>
   </div>
 </header>
 
 <div class="container">
+  <!-- Intro -->
+  <section style="margin-bottom: 2rem; max-width: 720px; margin-left: auto; margin-right: auto;">
+    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--color-text-secondary);">
+      If you're a solo developer or small team shipping code in 2026, you've already felt the shift — AI isn't a novelty anymore, it's a co-pilot you trust with production commits. The question isn't <em>whether</em> to use an AI coding agent. It's <strong>which one</strong>.
+    </p>
+    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--color-text-secondary);">
+      <strong>Cursor</strong> (the polished IDE), <strong>Aider</strong> (the terminal purist), and <strong>Cline</strong> (the autonomous golem) represent three fundamentally different philosophies of how AI should help you write code. Each excels at something the others don't. Each has a dark side.
+    </p>
+    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--color-text-secondary);">
+      We spent a month putting each through the same gauntlet — feature builds, refactors, research-heavy tasks, and daily grind coding — to give you the straight answer on which familiar deserves your keystrokes.
+    </p>
+    <div style="margin-top: 2rem; text-align: center;">
+      <a href="https://ko-fi.com/codecitadel" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: #d49aa8; color: #0a0f1a; border-radius: 999px; font-weight: 600; font-size: 0.9rem; text-decoration: none;">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+        ☕ Elixir for the Wizard
+      </a>
+      <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-top: 0.5rem;">If this grimoire saves you a headache, sustain the arcanum.</p>
+    </div>
+  </section>
+
   <!-- Quick Verdict -->
   <section class="card" style="margin-bottom: 2rem; background: linear-gradient(135deg, rgba(201, 168, 76, 0.1), transparent); border-color: var(--color-accent);">
     <div class="card-body" style="padding: 2rem;">
@@ -83,7 +104,7 @@ description: "We pit the three strongest AI coding agents against each other in 
           </tr>
           <tr>
             <td><strong>Model Support</strong></td>
-            <td>GPT-4o, Claude 3.5, custom</td>
+            <td>Claude 4, GPT-4o, Sonnet, custom</td>
             <td>Any (BYOK: OpenAI, Anthropic, Ollama, etc.)</td>
             <td>Any (BYOK + OpenRouter)</td>
           </tr>
@@ -107,8 +128,8 @@ description: "We pit the three strongest AI coding agents against each other in 
           </tr>
           <tr>
             <td><strong>MCP Support</strong></td>
-            <td class="feature-cross">❌</td>
-            <td class="feature-cross">❌</td>
+            <td class="feature-check">✅ Full MCP client</td>
+            <td class="feature-partial">⚠️ Limited via plugins</td>
             <td class="feature-check">✅ Full MCP client</td>
           </tr>
           <tr>
@@ -162,13 +183,13 @@ description: "We pit the three strongest AI coding agents against each other in 
       </div>
       <div class="card-body">
         <h4>Killer Feature: Composer</h4>
-        <p>Multi-file editing with live diff preview. Say "add auth to the API" and watch it create routes, middleware, tests, and update configs across 15 files. You review, approve, done.</p>
+        <p>Multi-file editing with live diff preview. Say "add auth to the API" and watch it create routes, middleware, tests, and update configs across 15 files. You review, approve, done. No other tool does this with this level of polish.</p>
         
         <h4>@codebase Chat</h4>
-        <p>Ask "where do we handle webhooks?" and it searches your entire indexed codebase, showing relevant files with snippets. No more grep voyages.</p>
+        <p>Ask "where do we handle webhooks?" and it searches your entire indexed codebase, showing relevant files with snippets. No more grep voyages through a sea of directories.</p>
         
         <h4>Rules System (.cursorrules)</h4>
-        <p>Project-specific instructions that persist. "Use Tailwind, no custom CSS. Write Vitest tests. Follow existing patterns." The familiar remembers.</p>
+        <p>Project-specific instructions that persist. "Use Tailwind, no custom CSS. Write Vitest tests. Follow existing patterns." The familiar remembers — across sessions, across team members.</p>
         
         <div class="grid grid-2" style="gap: 1rem; margin-top: 1rem;">
           <div class="card" style="padding: 1rem; background: rgba(63, 185, 80, 0.1); border-color: var(--color-success);">
@@ -178,6 +199,7 @@ description: "We pit the three strongest AI coding agents against each other in 
               <li>Composer = multi-file magic</li>
               <li>@codebase = instant context</li>
               <li>Privacy Mode (Business)</li>
+              <li>MCP support built in</li>
               <li>Team features (share rules, prompts)</li>
             </ul>
           </div>
@@ -187,14 +209,14 @@ description: "We pit the three strongest AI coding agents against each other in 
               <li>Proprietary, closed source</li>
               <li>$20/mo for good models</li>
               <li>Index lag on huge repos</li>
-              <li>No autonomous agent mode</li>
+              <li>No real autonomous mode</li>
               <li>Vendor lock-in risk</li>
             </ul>
           </div>
         </div>
         
         <div style="margin-top: 1.5rem; padding: 1rem; background: var(--color-bg); border-radius: var(--radius-md); border-left: 3px solid var(--color-accent);">
-          <strong>💰 Real Cost:</strong> $20/mo Pro = unlimited GPT-4o + Claude 3.5 Sonnet + fast requests. Business $40 adds SSO, audit logs, privacy mode enforcement.
+          <strong>💰 Real Cost:</strong> $20/mo Pro = unlimited Claude 4 + GPT-4o + fast requests. Business $40 adds SSO, audit logs, privacy mode enforcement. Free tier gives 2,000 completion requests and 50 premium model requests.
         </div>
       </div>
     </article>
@@ -211,13 +233,13 @@ description: "We pit the three strongest AI coding agents against each other in 
       </div>
       <div class="card-body">
         <h4>Philosophy: Every Edit is a Commit</h4>
-        <p>Aider doesn't "apply changes" — it creates git commits. You review with <code>git diff</code>, <code>git log --oneline</code>, <code>git reset</code>. Your history stays clean. Your workflow stays yours.</p>
+        <p>Aider doesn't "apply changes" — it creates git commits. You review with <code>git diff</code>, <code>git log --oneline</code>, <code>git reset</code>. Your history stays clean. Your workflow stays yours. This is the closest you'll get to a senior dev pairing with you in a tmux session.</p>
         
         <h4>Repo Map (The Secret Weapon)</h4>
-        <p>Instead of stuffing 100k tokens of context, Aider builds a <strong>tree-sitter powered map</strong> of your codebase: symbols, imports, call graphs. It "knows" your code without reading it all. Works on repos of any size.</p>
+        <p>Instead of stuffing 100k tokens of context, Aider builds a <strong>tree-sitter powered map</strong> of your codebase: symbols, imports, call graphs. It "knows" your code without reading it all. Works on repos of any size. This is genuinely impressive — ask it a question about code 50 files deep and it navigates like it's been on the project for years.</p>
         
         <h4>Bring Your Own Keys</h4>
-        <p>No subscription. You pay API costs directly. Use GPT-4o, Claude 3.5, or local models via Ollama. <strong>A 10k token session costs ~$0.05-0.15.</strong> For daily use: ~$5-15/mo vs $20 fixed.</p>
+        <p>No subscription. You pay API costs directly. Use Claude 4, GPT-4o, or local models via Ollama. <strong>A 10k token session costs ~$0.05-0.15.</strong> For daily use: ~$5-15/mo vs $20 fixed. If you're budget-conscious, Aider wins on cost alone.</p>
         
         <div class="grid grid-2" style="gap: 1rem; margin-top: 1rem;">
           <div class="card" style="padding: 1rem; background: rgba(63, 185, 80, 0.1); border-color: var(--color-success);">
@@ -228,7 +250,7 @@ description: "We pit the three strongest AI coding agents against each other in 
               <li>Any model, local or cloud</li>
               <li>Pay-per-use (often cheaper)</li>
               <li>Voice input (Whisper)</li>
-              <li>No telemetry</li>
+              <li>No telemetry whatsoever</li>
             </ul>
           </div>
           <div class="card" style="padding: 1rem; background: rgba(248, 81, 73, 0.1); border-color: var(--color-error);">
@@ -244,7 +266,7 @@ description: "We pit the three strongest AI coding agents against each other in 
         </div>
         
         <div style="margin-top: 1.5rem; padding: 1rem; background: var(--color-bg); border-radius: var(--radius-md); border-left: 3px solid var(--color-success);">
-          <strong>💰 Real Cost:</strong> GPT-4o ~$5-15/mo for daily use. Claude 3.5 Sonnet ~$10-30/mo. Local (Ollama) = $0 after hardware. <a href="https://aider.chat/docs/costs.html" target="_blank" rel="noopener">Aider cost calculator →</a>
+          <strong>💰 Real Cost:</strong> Claude 4 ~$10-30/mo for daily use. GPT-4o ~$5-15/mo. Local (Ollama) = $0 after hardware. <a href="https://aider.chat/docs/costs.html" target="_blank" rel="noopener">Aider cost calculator →</a>
         </div>
       </div>
     </article>
@@ -263,17 +285,18 @@ description: "We pit the three strongest AI coding agents against each other in 
         <h4>Autonomous Loop: Plan → Act → Observe → Repeat</h4>
         <p>You say "add Stripe checkout to the billing page." Cline:</p>
         <ol style="padding-left: 1.25rem; margin: 1rem 0;">
-          <li><strong>Plans:</strong> Creates todo list (research Stripe API, create webhook, update UI, test)</li>
+          <li><strong>Plans:</strong> Creates a task list (research Stripe API, create webhook, update UI, test)</li>
           <li><strong>Acts:</strong> Edits files, runs commands, installs packages</li>
           <li><strong>Observes:</strong> Runs tests, checks build, reads error output</li>
           <li><strong>Iterates:</strong> Fixes failures, refines, completes todos</li>
         </ol>
+        <p>This loop is the closest thing to a junior developer who just needs supervision. It's powerful — and occasionally terrifying when it goes on a 50-file refactor spree.</p>
         
         <h4>Browser Tool = Live Research</h4>
-        <p>Cline can <strong>browse the web</strong>. It reads Stripe docs, checks GitHub issues, searches Stack Overflow — all mid-task. No more context-switching to browser.</p>
+        <p>Cline can <strong>browse the web</strong>. It reads Stripe docs, checks GitHub issues, searches Stack Overflow — all mid-task. No more context-switching to browser. This alone saves 10-15 context switches per day.</p>
         
         <h4>MCP (Model Context Protocol)</h4>
-        <p>Connect to <strong>any external tool</strong>: GitHub API, Linear, Postgres, Redis, your internal APIs. Cline becomes a universal automation interface.</p>
+        <p>Connect to <strong>any external tool</strong>: GitHub API, Linear, Postgres, Redis, your internal APIs. Cline becomes a universal automation interface — it's not just a coding tool, it's an infrastructure agent.</p>
         
         <div class="grid grid-2" style="gap: 1rem; margin-top: 1rem;">
           <div class="card" style="padding: 1rem; background: rgba(234, 76, 137, 0.1); border-color: #ea4c89;">
@@ -294,13 +317,13 @@ description: "We pit the three strongest AI coding agents against each other in 
               <li>API costs can spike</li>
               <li>VS Code only (for now)</li>
               <li>Slower for simple edits</li>
-              <li>Occasional loop bugs</li>
+              <li>Occasional agent loop bugs</li>
             </ul>
           </div>
         </div>
         
         <div style="margin-top: 1.5rem; padding: 1rem; background: var(--color-bg); border-radius: var(--radius-md); border-left: 3px solid #ea4c89;">
-          <strong>💰 Real Cost:</strong> Via OpenRouter: GPT-4o ~$5-20/mo, Claude 3.5 ~$10-40/mo. Local models = free. <em>Set a budget limit in settings.</em>
+          <strong>💰 Real Cost:</strong> Via OpenRouter: GPT-4o ~$5-20/mo, Claude 4 ~$10-40/mo. Local models = free. <em>Set a budget limit in settings — the autonomous loop can burn tokens fast if it gets stuck.</em>
         </div>
       </div>
     </article>
@@ -314,42 +337,42 @@ description: "We pit the three strongest AI coding agents against each other in 
         <div class="card-body" style="text-align: center; padding: 2rem;">
           <div style="font-size: 3rem; margin-bottom: 1rem;">🏃</div>
           <h3>Daily Feature Work</h3>
-          <p style="color: var(--color-text-secondary);">Cursor. Composer handles multi-file features. @codebase finds context. Fastest loop.</p>
+          <p style="color: var(--color-text-secondary);">Cursor. Composer handles multi-file features. @codebase finds context. Fastest loop for getting real work done.</p>
         </div>
       </div>
       <div class="card">
         <div class="card-body" style="text-align: center; padding: 2rem;">
           <div style="font-size: 3rem; margin-bottom: 1rem;">🔧</div>
           <h3>Refactoring / Modernization</h3>
-          <p style="color: var(--color-text-secondary);">Aider. Git commits per change. Repo map handles huge codebases. You review diffs.</p>
+          <p style="color: var(--color-text-secondary);">Aider. Git commits per change. Repo map handles huge codebases. You review diffs with <code>git log</code> — clean and reversible.</p>
         </div>
       </div>
       <div class="card">
         <div class="card-body" style="text-align: center; padding: 2rem;">
           <div style="font-size: 3rem; margin-bottom: 1rem;">🔬</div>
           <h3>Research-Heavy Tasks</h3>
-          <p style="color: var(--color-text-secondary);">Cline. "Implement OAuth2 with PKCE using our provider's API." It reads docs, writes code, tests.</p>
+          <p style="color: var(--color-text-secondary);">Cline. "Implement OAuth2 with PKCE using our provider's API." It reads docs, writes code, tests. End-to-end in one shot.</p>
         </div>
       </div>
       <div class="card">
         <div class="card-body" style="text-align: center; padding: 2rem;">
           <div style="font-size: 3rem; margin-bottom: 1rem;">🔒</div>
           <h3>Privacy / Air-Gapped</h3>
-          <p style="color: var(--color-text-secondary);">Aider + Ollama (local). Zero cloud. Zero telemetry. Your code never leaves.</p>
+          <p style="color: var(--color-text-secondary);">Aider + Ollama (local). Zero cloud. Zero telemetry. Your code never leaves your machine.</p>
         </div>
       </div>
       <div class="card">
         <div class="card-body" style="text-align: center; padding: 2rem;">
           <div style="font-size: 3rem; margin-bottom: 1rem;">💰</div>
           <h3>Cost Optimization</h3>
-          <p style="color: var(--color-text-secondary);">Aider (pay-per-use) or Cline (OpenRouter cheap models). Cursor Pro if you want predictable billing.</p>
+          <p style="color: var(--color-text-secondary);">Aider (pay-per-use) or Cline (OpenRouter cheap models). Cursor Pro if you want predictable billing and don't mind $20/mo.</p>
         </div>
       </div>
       <div class="card">
         <div class="card-body" style="text-align: center; padding: 2rem;">
           <div style="font-size: 3rem; margin-bottom: 1rem;">👥</div>
           <h3>Team Standardization</h3>
-          <p style="color: var(--color-text-secondary);">Cursor Business. Shared .cursorrules, privacy enforcement, SSO, audit logs. IDE everyone knows.</p>
+          <p style="color: var(--color-text-secondary);">Cursor Business. Shared .cursorrules, privacy enforcement, SSO, audit logs. An IDE everyone already knows.</p>
         </div>
       </div>
     </div>
@@ -360,7 +383,7 @@ description: "We pit the three strongest AI coding agents against each other in 
     <div class="card-body" style="padding: 2.5rem;">
       <h2 style="text-align: center; margin-bottom: 1.5rem;">💡 The Wizard's Secret: Use All Three</h2>
       <p style="text-align: center; color: var(--color-text-secondary); max-width: 700px; margin: 0 auto 2rem; font-size: 1.1rem;">
-        They're not mutually exclusive. They're <strong>different tools for different incantations</strong>.
+        They're not mutually exclusive. They're <strong>different tools for different incantations</strong>. The best devs we know use all three depending on the task.
       </p>
       <div class="grid grid-3" style="gap: 1rem; text-align: center;">
         <div style="padding: 1.5rem; background: var(--color-bg); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
@@ -377,14 +400,27 @@ description: "We pit the three strongest AI coding agents against each other in 
         </div>
       </div>
       <p style="text-align: center; color: var(--color-text-secondary); margin-top: 2rem; font-size: 0.95rem;">
-        <strong>Pro tip:</strong> Open Cursor for coding. Keep a terminal tab with Aider for git-heavy work. Invoke Cline when you need research + execution. Your grimoire, your rules.
+        <strong>Our setup:</strong> Cursor for daily coding with a terminal tab running Aider for git-heavy work. Cline gets invoked when we need research + execution in one shot. Three tools, one grimoire — your rules.
       </p>
     </div>
   </section>
 
+  <!-- Ko-fi CTA -->
+  <section style="margin-top: 3rem; text-align: center; padding: 2.5rem; background: linear-gradient(135deg, rgba(212, 154, 168, 0.08), rgba(201, 168, 76, 0.05)); border: 1px solid var(--color-accent); border-radius: var(--radius-lg);">
+    <h2 style="margin-bottom: 1rem;">☕ Sustain the Arcanum</h2>
+    <p style="color: var(--color-text-secondary); max-width: 550px; margin: 0 auto 1.5rem; font-size: 1rem;">
+      These grimoires take real moon-cycles to forge. If this guide saved you time — or saved you from picking the wrong tool — an elixir for the wizard keeps the scribes writing.
+    </p>
+    <a href="https://ko-fi.com/codecitadel" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem; background: #d49aa8; color: #0a0f1a; border-radius: 999px; font-weight: 600; font-size: 1rem; text-decoration: none;">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+      ☕ Elixir for the Wizard
+    </a>
+    <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-top: 0.75rem;">One-time or monthly — every drop fuels more grimoires.</p>
+  </section>
+
   <!-- Affiliate Disclosure -->
-  <section style="margin-top: 3rem; padding: 1.5rem; background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); font-size: 0.85rem; color: var(--color-text-secondary); text-align: center;">
-    <p><strong>† Affiliate links</strong> — We earn commission if you subscribe via our links (Cursor, n8n Cloud, Raycast, Linear, Warp). This funds the grimoires. <a href="/disclosure/" style="color: var(--color-accent);">Full disclosure scroll →</a></p>
+  <section style="margin-top: 2rem; padding: 1.5rem; background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); font-size: 0.85rem; color: var(--color-text-secondary); text-align: center;">
+    <p><strong>† Affiliate links</strong> — Some links in this guide may be affiliate links. If you subscribe via them, we earn a commission at no extra cost to you. This funds the grimoires. <a href="https://ko-fi.com/codecitadel" style="color: var(--color-accent);">Full disclosure scroll →</a></p>
   </section>
 </div>
 
